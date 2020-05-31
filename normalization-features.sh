@@ -30,7 +30,9 @@
 #
 # After this script is completed, you will get normalized feature files in ./data/prm/ (extension *.norm.prm)
 # as well as label files indicating the time label of speech frames in ./data/lbl/
-	 
+
+mkdir -p data/lbl 
+
         echo "Normalise energy : `date` "
 	CMD_NORM_E="bin/NormFeat --config cfg/NormFeat_energy_SPro.cfg --inputFeatureFilename data/data.lst --featureFilesPath  data/prm/"
 	echo $CMD_NORM_E
