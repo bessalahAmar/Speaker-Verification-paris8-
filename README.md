@@ -7,7 +7,7 @@ Steps to run :
 3) ./normalization-features.sh
 4) ./train-world.sh
 
-> :warning: **The TrainWorld.cfg from Alize requires .ndx files** (to create them see below)
+:warning: **The TrainWorld.cfg from Alize requires .ndx files** (to create them see below)
 
 # Getting .ndx files to train the models
 
