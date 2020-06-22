@@ -1,6 +1,6 @@
 # Speaker-Verification-paris8-
 
-Steps to run :
+Steps to run:
 
 1) add wav folder in data directory
 2) ./extract-features.sh
@@ -22,5 +22,5 @@ Their content looks like this:
 - f1, f2, etc: name of the feature files used to create it
 
 # Crédit 
-https://alize.univ-avignon.fr
+https://alize.univ-avignon.fr<br/>
 https://www.irisa.fr/metiss/guig/spro/spro-4.0.1/spro_3.html
