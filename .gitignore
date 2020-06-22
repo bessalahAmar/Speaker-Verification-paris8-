@@ -1,7 +1,6 @@
-/data/wav/
-/data/prm
-/data/lbl
+/data
 /log
 /ndx
 /tuto-data
 /gmm
+/res

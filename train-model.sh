@@ -37,7 +37,7 @@
 #	However, the configuration files provided for each executable used in this tutorial are as close as possible from the state-of-the-art configuration 
 #	that can be used for NIST-SRE evaluation. In this respect, those configuration files are designed to provide a good starting point.
 
-# 0.1 Make 'gmm' and 'log' directories
+# 0.1 Make 'gmm', 'log', 'res' & 'ndx' directories
 	mkdir -p log
 	mkdir -p gmm
 	mkdir -p res
@@ -70,10 +70,10 @@
         	# display $line or do something with $line
 		word+=" $line"
 
-		if [[ $j -gt 10 ]];then
-			echo -n $word > ndx/computetest_gmm_target-seg-tmp.ndx
-		break
-		fi
+		#if [[ $j -gt 10 ]];then
+		#	echo -n $word > ndx/computetest_gmm_target-seg-tmp.ndx
+		#break
+		#fi
 		j=$((j+1))
 	done < "$file"
 
@@ -84,9 +84,9 @@
 		#echo -n "$VAR" >> ndx/computetest_gmm_target-seg.ndx
 		#echo "" >> ndx/computetest_gmm_target-seg.ndx
 		
-		if [[ $i -gt 10 ]];then
-			break
-		fi
+		#if [[ $i -gt 10 ]];then
+		#	break
+		#fi
 		i=$((i+1))
 	done
 
@@ -96,9 +96,9 @@
 	echo "		done, see log/TrainWorld.log for details"
 
 # 2. Speaker GMM model adaptation
-	echo "Train Speaker dependent GMMs"
-	bin/TrainTarget --config cfg/TrainTarget.cfg &> log/TrainTarget.cfg
-	echo "		done, see log/TrainTarget.cfg for details"
+#	echo "Train Speaker dependent GMMs"
+#	bin/TrainTarget --config cfg/TrainTarget.cfg &> log/TrainTarget.cfg
+#	echo "		done, see log/TrainTarget.cfg for details"
 
 # 3. Speaker model comparison
 	echo "Compute Likelihood"
