@@ -41,54 +41,6 @@
 	mkdir -p log
 	mkdir -p gmm
 	mkdir -p res
-	mkdir -p ndx
-
-# 0.2 Generate the trainModel ndx file
-	i=1
-	echo -n "" > ndx/trainModel.ndx
-	for element in $(cat data/data.lst);do
-		j=$(printf "%02d" $i)
-		echo "spk$j $element" >> ndx/trainModel.ndx
-		i=$((i+1))	
-	done
-
-# 0.3 Generate the computetest GMM ndx file
-	i=0
-	j=0
-
-	echo -n "" > ndx/computetest_gmm_target-seg-tmp.ndx
-	VAR=""
-
-	VAR=$(cut "-d " -f1 "ndx/trainModel.ndx")
-	echo "$VAR" >> ndx/computetest_gmm_target-seg-tmp.ndx
-
-	echo -n "" > ndx/computetest_gmm_target-seg.ndx
-	word=""
-	file="ndx/computetest_gmm_target-seg-tmp.ndx"
-	while IFS= read line
-	do
-        	# display $line or do something with $line
-		word+=" $line"
-
-		#if [[ $j -gt 10 ]];then
-		#	echo -n $word > ndx/computetest_gmm_target-seg-tmp.ndx
-		#break
-		#fi
-		j=$((j+1))
-	done < "$file"
-
-	for element in $(cat data/data.lst);do
-		
-		echo "$element$word" >> ndx/computetest_gmm_target-seg.ndx
-		
-		#echo -n "$VAR" >> ndx/computetest_gmm_target-seg.ndx
-		#echo "" >> ndx/computetest_gmm_target-seg.ndx
-		
-		#if [[ $i -gt 10 ]];then
-		#	break
-		#fi
-		i=$((i+1))
-	done
 
 # 1. UBM training
 	echo "Train Universal Background Model by EM algorithm"
