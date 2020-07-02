@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.4.6)  1 JUL 2020 07:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.4.6)  2 JUL 2020 07:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,20 +277,20 @@ File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
 (./memoire.aux)
 \openout1 = `memoire.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
  (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count284
@@ -313,17 +313,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \degres on input line 42.
-LaTeX Info: Redefining \dots on input line 42.
-LaTeX Info: Redefining \up on input line 42.
+LaTeX Info: Redefining \degres on input line 43.
+LaTeX Info: Redefining \dots on input line 43.
+LaTeX Info: Redefining \up on input line 43.
 \c@lstlisting=\count290
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -332,17 +332,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <images/m2ise.png, id=1, 621.32124pt x 300.12125pt>
 File: images/m2ise.png Graphic file (type png)
 <use images/m2ise.png>
-Package pdftex.def Info: images/m2ise.png  used on input line 46.
+Package pdftex.def Info: images/m2ise.png  used on input line 47.
 (pdftex.def)             Requested size: 88.34958pt x 42.67912pt.
 <images/m1info.png, id=3, 621.32124pt x 300.12125pt>
 File: images/m1info.png Graphic file (type png)
 <use images/m1info.png>
-Package pdftex.def Info: images/m1info.png  used on input line 46.
+Package pdftex.def Info: images/m1info.png  used on input line 47.
 (pdftex.def)             Requested size: 88.34958pt x 42.67912pt.
 <images/oaccueil.png, id=4, 621.32124pt x 300.12125pt>
 File: images/oaccueil.png Graphic file (type png)
 <use images/oaccueil.png>
-Package pdftex.def Info: images/oaccueil.png  used on input line 47.
+Package pdftex.def Info: images/oaccueil.png  used on input line 48.
 (pdftex.def)             Requested size: 88.34958pt x 42.67912pt.
  [1
 
@@ -351,13 +351,12 @@ Package pdftex.def Info: images/oaccueil.png  used on input line 47.
 png> <./images/m1info.png> <./images/oaccueil.png>] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-8.
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
-(c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 71--79
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
@@ -367,17 +366,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
 
 ] [3] [4
 
-] (./memoire.toc [5])
+] (./memoire.toc)
 \tf@toc=\write3
 \openout3 = `memoire.toc'.
 
- [6] (./memoire.lof)
+ [5] [6
+
+] (./memoire.lof)
 \tf@lof=\write4
 \openout4 = `memoire.lof'.
 
- [7
-
-] [8
+ [7] [8
 
 ] (./memoire.loa)
 \tf@loa=\write5
@@ -386,12 +385,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
 [9] [10
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
-LaTeX Warning: Reference `sec-ordre-redaction' on page 1 undefined on input lin
-e 121.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--126
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
@@ -402,98 +401,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--126
 ]
 Chapitre 1.
 [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1237) has occurred while \output is active []
 
  [4]
-<fig/etape-acquisition-son.png, id=79, 945.5325pt x 228.855pt>
+<fig/etape-acquisition-son.png, id=70, 945.5325pt x 228.855pt>
 File: fig/etape-acquisition-son.png Graphic file (type png)
 <use fig/etape-acquisition-son.png>
-Package pdftex.def Info: fig/etape-acquisition-son.png  used on input line 185.
+Package pdftex.def Info: fig/etape-acquisition-son.png  used on input line 143.
 
 (pdftex.def)             Requested size: 467.99881pt x 113.27484pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 185--186
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
 [5 <./fig/etape-acquisition-son.png>] [6]
-Chapitre 2.
-[7
-
-]
-<fig/fourier.png, id=90, 551.05875pt x 255.95625pt>
+<fig/fourier.png, id=77, 551.05875pt x 255.95625pt>
 File: fig/fourier.png Graphic file (type png)
 <use fig/fourier.png>
-Package pdftex.def Info: fig/fourier.png  used on input line 235.
+Package pdftex.def Info: fig/fourier.png  used on input line 194.
 (pdftex.def)             Requested size: 390.0pt x 181.15608pt.
-
-Underfull \vbox (badness 2726) has occurred while \output is active []
-
- [8 <./fig/fourier.png>]
-<fig/mfcc.png, id=94, 719.68875pt x 436.63126pt>
+ [7]
+<fig/mfcc.png, id=82, 719.68875pt x 436.63126pt>
 File: fig/mfcc.png Graphic file (type png)
 <use fig/mfcc.png>
-Package pdftex.def Info: fig/mfcc.png  used on input line 258.
+Package pdftex.def Info: fig/mfcc.png  used on input line 217.
 (pdftex.def)             Requested size: 390.0pt x 236.61684pt.
- [9] [10 <./fig/mfcc.png>]
-Chapitre 3.
-<fig/model.png, id=101, 894.34125pt x 382.42876pt>
+ [8 <./fig/fourier.png>]
+Underfull \vbox (badness 4084) has occurred while \output is active []
+
+ [9 <./fig/mfcc.png>]
+<fig/model.png, id=89, 894.34125pt x 382.42876pt>
 File: fig/model.png Graphic file (type png)
 <use fig/model.png>
-Package pdftex.def Info: fig/model.png  used on input line 297.
+Package pdftex.def Info: fig/model.png  used on input line 261.
 (pdftex.def)             Requested size: 390.0pt x 166.76947pt.
-
-Underfull \vbox (badness 4366) has occurred while \output is active []
-
- [11
-
-]
-[12 <./fig/model.png>] [13]
-<fig/markov.png, id=112, 606.76688pt x 371.88937pt>
+ [10 <./fig/model.png>] [11]
+<fig/markov.png, id=96, 606.76688pt x 371.88937pt>
 File: fig/markov.png Graphic file (type png)
 <use fig/markov.png>
-Package pdftex.def Info: fig/markov.png  used on input line 373.
+Package pdftex.def Info: fig/markov.png  used on input line 337.
 (pdftex.def)             Requested size: 272.99881pt x 167.32596pt.
- [14] [15 <./fig/markov.png>] [16
+ [12] [13 <./fig/markov.png>] [14
+
+]
+Chapitre 2.
+[15] [16
+
+]
+Chapitre 3.
+[17] [18
 
 ]
 Chapitre 4.
 No file memoire.bbl.
-[17] (./memoire.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[19] (./memoire.aux) ) 
 Here is how much of TeX's memory you used:
- 5910 strings out of 480994
- 79267 string characters out of 5916033
+ 5870 strings out of 480994
+ 78439 string characters out of 5916033
  331452 words of memory out of 5000000
- 21308 multiletter control sequences out of 15000+600000
- 554333 words of font info for 73 fonts, out of 8000000 for 9000
+ 21280 multiletter control sequences out of 15000+600000
+ 548421 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,10n,36p,2394b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texl
-ive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2019/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2019/texmf-dist/
-fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2019/texmf-dist/fonts/type
-1/public/cm-super/sfbx1728.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/c
-m-super/sfbx2488.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sf
-cc1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb
-><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb><c:/texli
-ve/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2019/te
-xmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2019/texmf-dist/f
-onts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1
-/public/cm-super/sfrm1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm
--super/sfrm1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfs
-l1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-<c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texliv
-e/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2019/tex
-mf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2019/texmf-dist/fo
-nts/type1/public/cm-super/sfxc1440.pfb>
-Output written on memoire.pdf (29 pages, 1234341 bytes).
+{c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-s
+uper-t1.enc}<c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pf
+b><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texl
+ive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2019/t
+exmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2019/texmf-dist/
+fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2019/texmf-dist/fonts/type
+1/public/cm-super/sfcc1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/c
+m-super/sfrm0800.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sf
+rm1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
+><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texli
+ve/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2019/te
+xmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb>
+Output written on memoire.pdf (31 pages, 1104257 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
