@@ -68,33 +68,12 @@
 \markboth{\sc Résumé}{}
 \addcontentsline{toc}{chapter}{Résumé} 
 
-Le présent document sert aussi bien de \emph{template} que de guide
-des bonnes pratiques de rédaction d'un mémoire de stage ou d'un
-mémoire de projet tuteuré. Il est à destination des étudiants en
-\emph{Master~1 Informatique} et \emph{Master~2 ISE} de l'Université
-Paris 8 ainsi qu'à toute personne trouvant un intérêt à
-l'utiliser. \`A ce titre il est distribué selon la licence GPL
-(\emph{GNU Public Licence}) et vous pouvez en télécharger les sources
-à l'adresse~: \url{http://www.ai.univ-paris8.fr/~amsi/M2ISE/}.\\
+Ce document regroupe les informations nécessaires à la compréhension et à la mise en place de certaines méthodes dîtes de reconnaissance de la parole. En outre, il sera question des outils de traitement de la parole existants, dont certains que nous devrons apprendre à maîtriser afin de développer notre programme.\\
 
+Le projet en question repose sur le développement d'un programme informatique qui devra permettre l'identification d'une personne à partir de sa voix. Avant d'en arriver là, le programme devra d'abord effectuer un traitement de la voix de cette personne, afin d'en obtenir un modèle qui sera utilisé pour comparer cette voix avec des voix diverses de test, puis générer un résultat nous permettant de savoir si les deux voix correspondent, et donc si il s'agit de la même personne ou non.\\
 
-Attention, le résumé est la partie à rédiger en dernier. Dans un
-premier temps, vous devez, en deux phrases maximum, décrire le travail
-réalisé et détaillé dans ce mémoire. \`A la suite de ces deux phrases,
-allez un peu plus en profondeur et tentez de suivre un raisonnement
-vous emmenant à votre conclusion. Tout ceci doit aboutir à un
-paragraphe d'une demi-page permettant d'avoir une idée claire du
-travail effectué et des contributions. Enfin, la deuxième partie du
-résumé doit suivre le déroulement du mémoire et donner en une ou deux
-phrases le contenu de chaque chapitre : \guillemotleft{}~Dans le
-premier chapitre, nous\footnote{Vous remarquerez l'usage du
-  \emph{nous} ; cette forme est \textbf{obligatoire} dans la rédaction
-  d'un mémoire. Aussi, bannir l'usage du \emph{on} car comme dit
-  l'expression \guillemotleft{}~On est un c...~\guillemotright. Dernier
-  point, ceci est une \emph{footnote} (note de bas de page) et, même
-  si c'est présentement le cas, nous vous prions de ne pas insérer ce
-  type de notes dans le résumé.} ... Puis, nous détaillons ... dans le
-chapitre suivant ... Enfin, en conclusion nous ...~\guillemotright
+Nous entamerons ce rapport par une présentation des techniques permettant l'acquisition du son et son traitement. Puis, nous parlerons des méthodes permettant d'extraire les caractéristiques d'un son. Ensuite, nous aborderons les techniques permettant l'entraînement des modèles. Enfin, nous décrirons les méthodes utilisées pour tester l'identification d'une personne et nous analyserons les résultats obtenus. 
+
 \chapter*{Remerciements}
 \markboth{\sc Remerciements}{}
 \addcontentsline{toc}{chapter}{Remerciements} La page des
@@ -115,42 +94,18 @@ relation la plus personnelle.
 \chapter*{Introduction}
 \markboth{\sc Introduction}{}
 \addcontentsline{toc}{chapter}{Introduction}
-L'introduction peut être vue comme une version détaillée du résumé
-mais peut traiter de choses qui n'ont pas été citées dans ce
-dernier. Elle doit être écrite juste avant d'écrire le résumé
-(cf. section \ref{sec-ordre-redaction})\footnote{Jetez un \oe{}il au
-  code \LaTeX{} du présent document pour voir comment sont réalisées
-  les références dynamiques. Commandes utilisées~:
-  \texttt{\textbackslash{}ref} et
-  \texttt{\textbackslash{}label}.}.\\~\\ Dans une introduction~:
-\begin{itemize}
-\item \textbf{Vous devez} bien poser le contexte de votre mémoire,
-  ceci comprend~: la mission et son environnement ; un bref descriptif
-  de la (ou des) problématique(s) et les outils et méthodes imposées
-  ou choisies\footnote{\`A chaque fois que vous proposez plusieurs
-    \emph{items} dans une phrase, arrangez-vous pour en avoir au
-    minimum trois (n'en proposez pas trop non plus). Ceci donne un bon
-    rythme à votre texte~: un, deux et trois. \emph{Thanks to \sc
-      PG}.} ;
-\item \textbf{Vous devez} résumer les résultats ou solutions apportées
-  et éventuellement faire un mini-bilan par rapport à l'existant ;
-\item Lors de la rédaction d'un mémoire de stage, \textbf{vous pouvez}
-  brievement présenter la structure d'accueil au moment où vous posez
-  le contexte du mémoire mais ne soyez pas trop long surtout si vous
-  réservez une section de chapitre à cela\footnote{Il n'est pas
-    recommandé de réserver un chapitre entier à la seule présentation
-    de l'organisme d'accueil, vous pouvez par exemple insérer la
-    présentation de l'organisme dans un chapitre détaillant le contexte
-    et la problématique du stage.} ;
-\item \textbf{Vous pouvez} insérer une section \emph{\'Etat de l'Art}
-  dans l'introduction si ce dernier n'est pas assez conséquent (par
-  exemple lors d'un stage dans l'industrie) ou que le mémoire n'est
-  pas lui-même un \emph{\'Etat de l'Art}. Pour un projet tuteuré ou un
-  mémoire de stage \emph{Recherche}, un chapitre \emph{\'Etat de l'Art}
-  est fortement conseillé.
-\end{itemize}
 
+Le domaine de la reconnaissance vocale se compose d'une multitude de méthodes et de techniques permettant d'effectuer des traitements de la parole. 
 
+Parmi ces techniques, nous retrouvons notamment la reconnaissance du locuteur (permet d'identifier une personne d'après sa voix), la reconnaissance de la parole (permet d'analyser une voix afin de la transcrire sous forme de texte), ou encore la synthèse de la parole (permet de créer une parole artificielle à partir d'un texte).
+
+De nos jours, ces techniques sont très répandues dans les outils informatiques de tous les jours (ordinateurs, smartphones, objets connectés, etc), généralement pour la vérification d'identité ou encore l'exécution de commandes vocales. Ces plateformes offrent une utilisation simple et rapide de ces techniques, tout en restant performantes.\\
+
+Afin de tester les capacités et les performances de certaines de ces techniques, nous allons travailler sur un projet de reconnaissance de locuteur, qui devra permettre d'identifier une personne d'après sa voix.
+
+L'objectif final étant de pouvoir répondre à la question "Qui parle ?".\\
+
+Nous allons nous appuyer sur les nombreux outils développés dans le but de faciliter le traitement de la parole, et ainsi réaliser notre propre programme d'identification de locuteur.
 
 % chapitre 1 : ############################################
 
