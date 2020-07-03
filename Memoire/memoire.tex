@@ -77,14 +77,6 @@ Le projet en question repose sur le développement d'un programme informatique q
 
 Nous entamerons ce rapport par une présentation des techniques permettant l'acquisition du son et son traitement. Puis, nous parlerons des méthodes permettant d'extraire les caractéristiques d'un son. Ensuite, nous aborderons les techniques permettant l'entraînement des modèles. Enfin, nous décrirons les méthodes utilisées pour tester l'identification d'une personne et nous analyserons les résultats obtenus. 
 
-\chapter*{Remerciements}
-\markboth{\sc Remerciements}{}
-\addcontentsline{toc}{chapter}{Remerciements} La page des
-remerciements n'est pas obligatoire. Elle reste votre seul vrai espace
-de liberté complet. Il existe néanmoins une codification classique des
-remerciements consistant à remercier les personnes que vous citez de
-la relation la plus strictement professionnelle et hiérarchique à la
-relation la plus personnelle.
 %% Table des matières
 \tableofcontents
 %% La liste des figure est optionnelle (si votre rapport manque de
@@ -106,7 +98,7 @@ De nos jours, ces techniques sont très répandues dans les outils informatiques
 
 Afin de tester les capacités et les performances de certaines de ces techniques, nous allons travailler sur un projet de reconnaissance de locuteur, qui devra permettre d'identifier une personne d'après sa voix.
 
-L'objectif final étant de pouvoir répondre à la question "Qui parle ?".\\
+L'objectif final étant de pouvoir répondre à la question \guillemotleft{}~Qui parle ?~\guillemotright{}.\\
 
 Nous allons nous appuyer sur les nombreux outils développés dans le but de faciliter le traitement de la parole, et ainsi réaliser notre propre programme d'identification de locuteur.
 
@@ -116,11 +108,11 @@ Nous allons nous appuyer sur les nombreux outils développés dans le but de fac
 
 \section{Acquisition du son}
 
-Une membrane vibre sous l'effet de la pression acoustique et un dispositif qui dépend de la technologie du microphone convertit ces oscillations en signaux électriques. La conception d'un microphone comporte une partie acoustique et une partie électrique, qui vont définir ses caractéristiques et le type d'utilisation. ( https://fr.wikipedia.org/wiki/Microphone)
+Une membrane vibre sous l'effet de la pression acoustique et un dispositif qui dépend de la technologie du microphone convertit ces oscillations en signaux électriques. La conception d'un microphone comporte une partie acoustique et une partie électrique, qui vont définir ses caractéristiques et le type d'utilisation (https://fr.wikipedia.org/wiki/Microphone)
 
 \subsection{Type de microphone}
 
-Le choix du microphone dépend des applications de notre modèle de reconnaissances , dans le cas ou on favorise d’une source émettrice loin ou proche avec beaucoup de bruit ou peu. 
+Le choix du microphone dépend des applications de notre modèle de reconnaissance, dans le cas ou nous favorisons une source émettrice lointaine ou proche, avec beaucoup de bruit ou peu. 
 
 
 \subsubsection{Microphones dynamiques}
@@ -130,11 +122,15 @@ Les microphones dynamiques utilisent un ensemble diaphragme / bobine acoustique 
 
 \subsubsection{Microphones à condensateur}
 
-Les microphones à condensateur sont basés sur un assemblage diaphragme / plaque arrière chargé électriquement qui forme un condensateur sensible au son. Ici, les ondes sonores font vibrer un diaphragme très fin en métal ou en plastique recouvert de métal. Le diaphragme est monté juste devant une plaque arrière en métal rigide ou en céramique revêtue de métal. En termes électriques, cet ensemble ou élément est appelé un condensateur (appelé historiquement un "condensateur"), qui a la capacité de stocker une charge ou une tension. Lorsque l'élément est chargé, un champ électrique est créé entre le diaphragme et la plaque arrière, proportionnel à leur espacement. C’est la variation de cet espacement, due au mouvement du diaphragme par rapport à la plaque arrière, qui produit le signal électrique correspondant au son capté par un microphone à condensateur. La construction d’un microphone à condensateur doit inclure une disposition permettant de maintenir la charge électrique ou la tension de polarisation. Un microphone à condensateur électret a une charge permanente, maintenue par un matériau spécial déposé sur la plaque arrière ou sur le diaphragme. Les types non-électret sont chargés (polarisés) au moyen d'une source d'alimentation externe. La majorité des microphones à condensateur pour l’amplification du son sont du type électret. Tous les condenseurs contiennent des circuits actifs supplémentaires permettant à la sortie électrique de l'élément d'être utilisée avec des entrées de microphone classiques. Cela nécessite que tous les microphones à condensateur soient alimentés: soit par piles, soit par alimentation fantôme (méthode consistant à alimenter un microphone par le câble du microphone lui-même). Les microphones à condensateur présentent deux limitations potentielles dues aux circuits supplémentaires: premièrement, les composants électroniques produisent une faible quantité de bruit; deuxièmement, il existe une limite au niveau de signal maximal que l’électronique peut gérer. Pour cette raison, les spécifications du microphone à condensateur incluent toujours un facteur de bruit et un niveau sonore maximal. Les bonnes conceptions, cependant, ont des niveaux de bruit très bas et sont également capables de très grande plage dynamique.
+Les microphones à condensateur sont basés sur un assemblage diaphragme / plaque arrière chargé électriquement qui forme un condensateur sensible au son. Ici, les ondes sonores font vibrer un diaphragme très fin en métal ou en plastique recouvert de métal. Le diaphragme est monté juste devant une plaque arrière en métal rigide ou en céramique revêtue de métal. 
+
+En terme électrique, cet ensemble ou élément est appelé un condensateur (appelé historiquement un \guillemotleft{}~condensateur~\guillemotright{}), qui a la capacité de stocker une charge ou une tension. Lorsque l'élément est chargé, un champ électrique est créé entre le diaphragme et la plaque arrière, proportionnel à leur espacement. C'est la variation de cet espacement, due au mouvement du diaphragme par rapport à la plaque arrière, qui produit le signal électrique correspondant au son capté par un microphone à condensateur. La construction d’un microphone à condensateur doit inclure une disposition permettant de maintenir la charge électrique ou la tension de polarisation. Un microphone à condensateur électret a une charge permanente, maintenue par un matériau spécial déposé sur la plaque arrière ou sur le diaphragme. Les types non-électriques sont chargés (polarisés) au moyen d'une source d'alimentation externe. La majorité des microphones à condensateur pour l’amplification du son sont du type électret. Tous les condenseurs contiennent des circuits actifs supplémentaires, permettant à la sortie électrique de l'élément d'être utilisée avec des entrées de microphone classiques. 
+
+Cela nécessite que tous les microphones à condensateur soient alimentés: soit par piles, soit par alimentation fantôme (méthode consistant à alimenter un microphone par le câble du microphone lui-même). Les microphones à condensateur présentent deux limitations potentielles dues aux circuits supplémentaires: premièrement, les composants électroniques produisent une faible quantité de bruit; deuxièmement, il existe une limite au niveau de signal maximal que l’électronique peut gérer. Pour cette raison, les spécifications du microphone à condensateur incluent toujours un facteur de bruit et un niveau sonore maximal. Les bonnes conceptions, cependant, ont des niveaux de bruit très bas et sont également capables de très grande plage dynamique.
 
 \subsubsection{Différence entre microphones à condensateur et microphone dynamique}
 
-Les microphones à condensateur sont plus complexes que les dynamiques et ont tendance à être un peu plus coûteux. De plus, les condenseurs peuvent être affectés par des températures et des taux d'humidité extrêmes, ce qui peut les rendre bruyants ou en panne de façon temporaire. Cependant, les condenseurs peuvent facilement être fabriqués avec une sensibilité plus élevée et peuvent fournir un son plus doux et plus naturel, en particulier à des fréquences élevées. La réponse en fréquence plate et la plage de fréquence étendue sont beaucoup plus faciles à obtenir dans un condenseur. De plus, les microphones à condensateur peuvent être très petits sans perte significative de performances. Image Microphone à condensateur La décision d’utiliser un microphone à condensateur ou dynamique dépend non seulement de la source sonore et du système de renforcement acoustique, mais également du réglage physique. D'un point de vue pratique, si le microphone doit être utilisé dans un environnement sévère tel qu'un club de rock'n'roll ou pour le son en extérieur, des types dynamiques constitueront un bon choix. Dans un environnement plus contrôlé, tel qu'une salle de concert ou une configuration théâtrale, un microphone à condensateur peut être préféré pour de nombreuses sources sonores, en particulier lorsque la qualité sonore optimale est désirée. (https://www.shure.com/en-US/support/find-an-answer/difference-between-a-dynamic-andcondenser-microphone)
+Les microphones à condensateur sont plus complexes que les dynamiques et ont tendance à être un peu plus coûteux. De plus, les condenseurs peuvent être affectés par des températures et des taux d'humidité extrêmes, ce qui peut les rendre bruyants ou en panne de façon temporaire. Cependant, les condenseurs peuvent facilement être fabriqués avec une sensibilité plus élevée et peuvent fournir un son plus doux et plus naturel, en particulier à des fréquences élevées. La réponse en fréquence plate et la plage de fréquence étendue sont beaucoup plus faciles à obtenir dans un condenseur. De plus, les microphones à condensateur peuvent être très petits sans perte significative de performances. Image Microphone à condensateur La décision d’utiliser un microphone à condensateur ou dynamique dépend non seulement de la source sonore et du système de renforcement acoustique, mais également du réglage physique. D'un point de vue pratique, si le microphone doit être utilisé dans un environnement sévère tel qu'un club de rock'n'roll ou pour le son en extérieur, des types dynamiques constitueront un bon choix. Dans un environnement plus contrôlé, tel qu'une salle de concert ou une configuration théâtrale, un microphone à condensateur peut être préféré pour de nombreuses sources sonores, en particulier lorsque la qualité sonore optimale est désirée (https://www.shure.com/en-US/support/find-an-answer/difference-between-a-dynamic-andcondenser-microphone)
 
 \subsection{Etape de traitement du son}
 
@@ -143,19 +139,19 @@ Le traitement numérique du signal par ordinateur exige que le signal soit conve
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1.2\linewidth]{fig/etape-acquisition-son.png}
-  \caption{étape de traitement du son}
+  \caption{Étapes de traitement du son}
 \end{figure}
 
 \subsubsection{Échantillonnage}
 
-L'échantillonnage consiste à prélever les valeurs d'un signal à intervalles définis, généralement réguliers. Il produit une suite de valeurs discrètes nommées échantillons.(https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal))
+L'échantillonnage consiste à prélever les valeurs d'un signal à intervalles définis, généralement réguliers. Il produit une suite de valeurs discrètes nommées échantillons \texttt{(https://fr.wikipedia.org/wiki/\%C3\%89chantillonnage\_(signal))}.\\
 
-\textbf{Cadence d'échantillonnage : ( théoreme de Shannon-Nyquist )}
+\textbf{Cadence d'échantillonnage (théorème de Shannon-Nyquist) :}
 
-si toutes les fréquences du signal sont inférieures à la moitié de la fréquence d'échantillonnage, il peut être parfaitement reconstitué ( frequence d’échantionnage = 2x frequenceMax du signal )
+Si toutes les fréquences du signal sont inférieures à la moitié de la fréquence d'échantillonnage, il peut être parfaitement reconstitué (fréquence d’échantillonnage = 2x frequenceMax du signal).
 
 \subsubsection{Quantification (conversion analogique numérique)}
-En traitement des signaux, la quantification est le procédé qui permet d'approcher un signal continu par les valeurs d'un ensemble discret d'assez petite taille. L’amplitude relevée à chaque étape d’échantillonnage va être codée en binaire sur un certain nombre de bits : 8, 16, 24, 32… C’est la quantification. Là encore, plus le nombre de bits va être élevé, plus la valeur numérique de l’amplitude sera proche de la valeur originale.
+En traitement des signaux, la quantification est le procédé qui permet d'approcher un signal continu par les valeurs d'un ensemble discret d'assez petite taille. L’amplitude relevée à chaque étape d’échantillonnage va être codée en binaire sur un certain nombre de bits : 8, 16, 24, 32, etc. C’est la quantification. Là encore, plus le nombre de bits va être élevé, plus la valeur numérique de l’amplitude sera proche de la valeur originale.
 
 \subsubsection{Compression}
 La compression audio est une forme de compression de données qui a pour but de réduire la taille d'un flux audio numérique en vue d'une transmission (contraintes de largeur de bande et de débit) ou d'un stockage (contrainte d'espace de stockage). On distingue la compression sans perte, qui permet de reconstituer exactement les données d'origine, de la compression en général, « avec pertes », qui abandonne des données jugées non nécessaires à l'écoute, au profit de la diminution du débit ou de la taille des fichiers. 
@@ -175,7 +171,7 @@ Le traitement de l’enregistrement obtenu passe par l’analyse de plusieurs pa
     \item l’accent 
     \item le ton 
     \item l’intonation 
-    \item la jointure (ex : « coopérer ») 
+    \item la jointure (ex : \guillemotleft{}~coopérer~\guillemotright{}) 
     \item la pause 
     \item le rythme
     \item le tempo et le débit
@@ -205,7 +201,7 @@ La transformation de Fourier discrète (TFD ou DFT en anglais) est un outil math
 
 Le codage prédictif linéaire est une méthode de codage et de représentation de la parole. Elle est appliquée sur un signal, afin d’en obtenir un modèle.
 
-« Elle repose principalement sur l’hypothèse que la parole peut être modélisée par un processus linéaire. Il s’agit donc de prédire le signal à un instant n à partir des p échantillons précédents. La parole n’étant cependant pas un processus parfaitement linéaire, la moyenne que constitue la somme pondérée du signal sur p pas de temps introduit une erreur qu’il est nécessaire de corriger par l’introduction du terme e(n). » .
+« Elle repose principalement sur l’hypothèse que la parole peut être modélisée par un processus linéaire. Il s’agit donc de prédire le signal à un instant n à partir des p échantillons précédents. La parole n’étant cependant pas un processus parfaitement linéaire, la moyenne que constitue la somme pondérée du signal sur p pas de temps introduit une erreur qu’il est nécessaire de corriger par l’introduction du terme e(n).
 
 \subsubsection{MFCC - Mel Frequency Cepstral Coefficients}
 
@@ -217,20 +213,21 @@ son spectre sera plus précis et aura un aspect très proche de ce qui serait pe
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\linewidth]{fig/mfcc.png}
-  \caption{Etape du calcul des coefficients MFCC}
+  \caption{Étapes du calcul des coefficients MFCC}
 \end{figure}
 
-\textbf{Efficacité de MFCC}
+
+\textbf{Efficacité de MFCC :}
 
 MFCC est considéré comme très efficace lorsqu’il est appliqué sur un enregistrement propre (pas de bruits de fond, bon volume vocal, etc), mais moins robuste lors de présence de bruit.
 
 On notera néanmoins que l’analyse MFCC Aurora a été développée de manière à effectuer un dé-bruitage sur un tel signal.
 
-\textbf{Exemple de mise en place}
+%\textbf{Exemple de mise en place}
 
-(page 16) : https://hal.inria.fr/tel-01251128/document
+%(page 16) : https://hal.inria.fr/tel-01251128/document
 
-\textbf{Résultat}
+\textbf{Résultat :}
 
 Le spectre finalement obtenu représente ainsi les informations phonétiques citées précédemment (traits prosodiques). Nous pouvons alors utiliser les valeurs de ce spectre afin d’effectuer les opérations voulues (modification du signal, récupération d’un d’un son, etc).
 
@@ -261,12 +258,12 @@ L'équation (2) contient deux facteurs qui peuvent être directement estimés: l
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\linewidth]{fig/model.png}
-  \caption{Etape modéle statistique}
+  \caption{Étapes du modèle statistique}
 \end{figure}
 
 \subsubsection{Modèle de langue}
 
-Le modèle de langue décide si un mot (ou une phrase) est valide dans une langue donnée Un modèle de langage statistique est une distribution de probabilité sur des séquences de mots. Étant donné une telle séquence, disons de longueur m, il attribue une probabilité à la séquence entière.
+Le modèle de langue décide si un mot (ou une phrase) est valide dans une langue donnée Un modèle de langage statistique est une distribution de probabilité sur des séquences de mots. Étant donné une telle séquence, disons de longueur m, il attribue une probabilité à la séquence entière.\\
 
 \textbf{Unigram}
 
@@ -276,11 +273,11 @@ Un modèle unigramme peut être traité comme la combinaison de plusieurs automa
 
 Dans ce modèle, la probabilité de chaque mot dépend uniquement de la probabilité de ce mot dans le document, de sorte que nous avons uniquement des automates finis à un état en tant qu'unités. L'automate lui-même a une distribution de probabilité sur tout le vocabulaire du modèle, en faisant un total de 1. Ce qui suit est une illustration du modèle unigramme d'un document.
 
-<tableau1>
+<tableau1>\\
 
 \textbf{n-gram}
 
-Dans un modèle à n-grammes, la probabilité P (w1, w2,…, wm) d’observer la phrase w1, w2,…, wm est approximée comme suit:
+Dans un modèle à n-grammes, la probabilité P (w1, w2, wm) d’observer la phrase w1, w2, wm est approximée comme suit:
 
 <eq4>
 
@@ -290,17 +287,17 @@ La probabilité conditionnelle peut être calculée à partir des comptes de fr�
 
 <eq5>
 
-Les termes modèles de langage bigram et trigram désignent les modèles à n-grammes avec n = 2 et n = 3, respectivement.
+Les termes modèles de langage bigram et trigram désignent les modèles à n-grammes avec n = 2 et n = 3, respectivement.\\
 
-\textbf{Exponential}
+\textbf{Exponentiel}
 
 Les modèles de langage d'entropie maximum codent la relation entre un mot et l'historique ngram à l'aide de fonctions. L'équation est :
 
 <eq6>
 
-où Z (w1, w2,…, wm-1) est la fonction de partition, a est le vecteur de paramètre et f (w1, w2,… wm) est la fonction de fonction. Dans le cas le plus simple, la fonction caractéristique n'est qu'un indicateur de la présence d'un certain n-gramme. Il est utile d’utiliser un préalable sur un ou une forme de régularisation. Le modèle log-bilinéaire est un autre exemple de modèle de langage exponentiel.
+où Z (w1, w2, wm-1) est la fonction de partition, a est le vecteur de paramètre et f (w1, w2, wm) est la fonction de fonction. Dans le cas le plus simple, la fonction caractéristique n'est qu'un indicateur de la présence d'un certain n-gramme. Il est utile d’utiliser un préalable sur un ou une forme de régularisation. Le modèle log-bilinéaire est un autre exemple de modèle de langage exponentiel.\\
 
-\textbf{Neural network}
+\textbf{Réseau de neurones}
 
 La probabilité d'une séquence de mots peut être obtenue à partir de la probabilité de chaque mot étant donné le contexte des mots qui le précèdent, en utilisant la règle de probabilité en chaîne (une conséquence du théorème de Bayes):
 
@@ -328,9 +325,9 @@ Le modèle acoustique doit estimer la probabilité de prononcer un message, à p
 
 Pour tout w donné, le modèle acoustique correspondant est synthétisé en concaténant des modèles de téléphone pour créer des mots tels que définis par un dictionnaire de prononciation.
 
-Un modèle acoustique est utilisé dans la reconnaissance automatique de la parole pour représenter la relation entre un signal audio et les phonèmes ou autres unités linguistiques qui composent la parole. Le modèle est appris à partir d'un ensemble d'enregistrements audio et de leurs transcriptions correspondantes. Il est créé en prenant des enregistrements audio de la parole et leurs transcriptions de texte, et en utilisant un logiciel pour créer des représentations statistiques des sons qui composent chaque mot.
+Un modèle acoustique est utilisé dans la reconnaissance automatique de la parole pour représenter la relation entre un signal audio et les phonèmes ou autres unités linguistiques qui composent la parole. Le modèle est appris à partir d'un ensemble d'enregistrements audio et de leurs transcriptions correspondantes. Il est créé en prenant des enregistrements audio de la parole et leurs transcriptions de texte, et en utilisant un logiciel pour créer des représentations statistiques des sons qui composent chaque mot.\\
 
-\textbf{HMM ( hidden markov model )}
+\textbf{HMM (hidden markov model)}
 
 Une chaîne de Markov contient tous les états possibles d'un système et la probabilité de passer d'un état à un autre.
 
@@ -371,16 +368,6 @@ Ce programme devra être capable d'effectuer multiples tâches afin de pouvoir i
 \subsection{Outils utilisées}
 
 Pour nous aider dans certaines de ces tâches, nous pourrons nous appuyer sur des outils performants, développés spécialement dans le but de faciliter les traitements sur le son.
-
-Fait sur Ubuntu
-Utilisation de scripte réalisés avec bash afin d'automatiser les commandes...
-PARLER de SPRO
-
-PArler de ALIZE
-Parler de LIA_RAL
-
-Parler de Alize pour android embarqué
-
 \section{Traitement des données}
 
 Afin d'obtenir des modèles de locuteurs robustes et performants, il est nécessaire de disposer d'une grande quantité de données (fichiers audio). Plus nous aurons de données, plus les modèles entraînés seront précis.  
@@ -403,7 +390,18 @@ Pour ce projet, nous avons récupéré une base de données composée d'enregist
 
 Pour chaque type de texte, le premier enregistrement est toujours réalisé dans un lieu sans bruit, puis les quatre autres sont fait dans des conditions réelles (bureau, lieu public, etc), ce qui permet d'avoir des qualités d'enregistrement variées.\\
 
->>>>>>>>>>>>>>Mettre Image explicative des fichiers ici<<<<<<<<<<<<<<<<<\\
+Le format de ces fichiers est comme suit : \textbf{\texttt{aaa\_x\_y}}, où :
+\begin{itemize}
+  \item \textbf{aaa} = le numéro d'identifiant du locuteur
+  \item \textbf{x} = les conditions d'enregistrement (silence, bruit, etc)
+  \item \textbf{y} = le texte qui est lu (2 = les chiffres, 3 = la phrase)
+\end{itemize}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\linewidth]{images/voiceSamples.png}
+  \caption{Exemple des fichiers correspondants à l'utilisateur avec l'identifiant \textbf{000}}
+\end{figure}
 
 Cela nous permet de disposer de 1060 fichiers audio au total, dont la moitié sera utilisée pour ce projet.
 
@@ -486,41 +484,83 @@ Ces derniers sont représentés sous une forme de liste, où chaque ligne corres
 
 \subsection{Identification du locuteur}
 
-Afin de pouvoir dire avec fiabilité si un locuteur à bien été identifié, il est nécessaire d'analyser les résultats obtenus à l'issue des étapes précédentes. Nous nous intéressons au score affiché en fin de chaque ligne du fichier de résultat, et voulons notamment savoir à partir de quelle valeur nous pouvions considérer que ce dernier représentait une identification positive.
+Afin de pouvoir dire avec fiabilité si un locuteur à bien été identifié, il est nécessaire d'analyser les résultats obtenus à l'issue des étapes précédentes. Nous nous intéressons au score affiché en fin de chaque ligne du fichier de résultat, et voulons notamment savoir à partir de quelle valeur nous pouvions considérer que ce dernier représentait une identification positive. Nous avons obtenu un total de 14045 comparaisons.
 
-Dans un premier temps, il est possible de filtrer ces résultats selon le signe du score (positif ou négatif), puisque les scores négatifs présents dans notre document signifient dans la majorité des cas traités que le locuteur et l'échantillon 
+Dans un premier temps, il est possible de filtrer ces résultats selon le signe du score (positif ou négatif), puisque les scores négatifs présents dans notre document signifient dans la majorité des cas que la voix du locuteur (modèle) ne correspond pas à celle testée, et qu'il s'agit donc de 2 personnes différentes. Il nous reste ainsi 1479 résultats où le score est positif.
+
+En ne conservant que ces scores, nous pouvons alors réduire le nombre de résultats à traiter.
+
+Dans un second temps, nous pouvons analyser les résultats restants afin de définir à partir de quel score les locuteurs sont correctement identifiés. Il se trouve que les scores supérieurs à 0.4 permettent une identification correcte du locuteur dans une majorité des cas, néanmoins, nous observons des erreurs d'identifications. Dans ce cas, nous pouvons augmenter la valeur du score considéré comme acceptable (à 0.5 par exemple), et ainsi réduire le nombre de faux positifs.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\linewidth]{images/badResultExample.png}
+  \caption{Résultat de plusieurs tests. Ici le locuteur \textbf{spk002} est correctement identifié (score de 0.58), tandis que les autres ont soit un score négatif soit trop faible, et ne sont donc pas pris en considération}
+\end{figure}
 
 % chapitre 5 : Conclusion et perspectives
 
 \chapter{Conclusion et Perspectives\label{chap-conclusion}}
-Vous arrivez à la presque-fin de votre périple (oui il restera le
-résumé à faire, rappelez-vous), la conclusion. Ici, il est attendu
-d'avoir un bilan du travail réalisé\footnote{Ne pas utiliser de
-  formules du type \guillemotleft{}~Ce stage a été très
-  enrichissant~\guillemotright{} ou \guillemotleft{}~Ce projet m'a
-  beaucoup apporté sur le plan professionnel ou
-  personnel~\guillemotright{} car si le travail en question est
-  important ou intéressant le mémoire doit naturellement le
-  refléter.}. Ce dernier doit être consolidé par les réalisations et
-les résultats obtenus. Il est utile de rappeler les améliorations
-apportées en les replaçant brievement dans leur contexte. Aussi, il est
-conseillé d'avoir un point de vue critique vis-à-vis de votre travail
-et souligner les points pouvant être améliorés. Ceci s'enchainera
-parfaitement avec les perspectives qui ouvrent la voie vers les
-nouvelles réalisations possibles sur la base de vos travaux. Les
-perspectives peuvent être données à court, moyen et long terme.
 
+Avant d'entamer le travail sur ce projet nous n'avions pas forcément toutes les connaissances nécessaires au développement d'outils dans ce genre de domaine.
+Mais au fur et à mesure, nous avons eu l'opportunité d'étudier les outils, techniques, méthodes, etc, nécessaires à un tel travail.
+De plus, nous avons pu voir les différents domaines et les différentes plateformes sur lesquels la reconnaissance de la parole était utilisée, ce qui nous à permis de visualiser les opportunités possibles, tant sur un plan professionnel que de simple curiosité personnelle.\\
 
+Aussi, une fois le programme réalisé, nous avons pu analyser les résultats produits et déterminer qu'ils étaient grandement améliorables.\\
 
-Par exemple, une conclusion à ce document peut être~:
-\guillemotleft{}~Dans ce document, nous avons présenté un ensemble de
-règles permettant d'écrire un mémoire de stage ou de projet
-tuteuré. Ce document utilise un langage de formatage de texte nommé
-\LaTeX. En perspectives, nous souhaitons que l'ensemble des étudiants
-lisent attentivement et utilisent ce document. Enfin, nous pensons que
-ce type d'exercie deviendra un standard pour chacun
-d'entre-eux~\guillemotright.
+Ces améliorations pourraient être apportées sur de prochains travaux de ce type, notamment au niveau de la réflexion quant aux outils ou techniques utilisés, qui offrent des possibilités très vastes, dont nous aurions pu tirer un peu plus parti. De plus, des considérations quant a la plateforme d'utilisation du programme pourraient être intéressantes, puisque Alize dispose par exemple d'outils permettant son utilisation su système Android.
 
-\bibliographystyle{alpha}
-\bibliography{memoire}
+\begin{thebibliography}{9}
+\bibitem{tp-exemple} 
+D. Istrate.
+\textit{TP Biométrie : Reconnaissance du locuteur}. 
+ESIGETEL.
+
+\bibitem{gmm} 
+Iosif Mporas, Todor Ganchev, Mihalis Siafarikas, Nikos Fakotakis
+\textit{Comparison of Speech Features on the Speech Recognition Task}. 
+Department of Electrical and Computer Engineering, University of Patras 26500 Rion-Patras, Greece, Journal of Computer Science 3 (8): 608-616, 2007
+
+\bibitem{article2} 
+Jonathan Hui.
+\textit{Speech Recognition — GMM, HMM}.
+[\textit{\texttt{https://medium.com/@jonathan\_hui/speech-recognition-gmm-hmm-8bb5eff8b196}}].
+Medium, sep 2019.
+
+\bibitem{spro-0}
+Site web officiel du projet \textit{SPro}.
+\textit{http://www.irisa.fr/metiss/guig/spro}.
+
+\bibitem{spro-doc}
+Documentation en ligne pour \textit{SPro}.
+\textit{https://www.irisa.fr/metiss/guig/spro/spro-4.0.1/spro.html}.
+
+\bibitem{alize.0}
+Site web officiel du projet \textit{Alize}.
+\textit{https://alize.univ-avignon.fr}.
+
+\bibitem{alize-1} 
+Aurelien Mayoue. 
+\textit{Reference System based on speech modality}. 
+GET-INT, 2006-2007.
+
+\bibitem{alize-2} 
+Aitor Hernández López. 
+\textit{Evaluation of the ALIZE/\texttt{LIA\_RAL} Speaker Verifcation Toolkit on an Embedded System}. 
+University Of Computer Science of Vienna (ICT), feb 2015.
+
+\bibitem{alize-3} 
+Anthony Larcher, Jean-François Bonastre, Benoît Fauve, Kong Aik Lee, Christophe Levy, Haizhou Li, John Mason, Jean-Yves Parfait.
+\textit{ALIZE 3.0-Open Source Toolkit for State-of-the-Art Speaker Recognition}. 
+Annual Conference of the International Speech Communication Association, Aug 2013, Lyon, France.
+
+\bibitem{latexcompanion} 
+Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+\textit{The \LaTeX\ Companion}. 
+Addison-Wesley, Reading, Massachusetts, 1993.
+
+\end{thebibliography}
+
+%\bibliographystyle{alpha}
+%\bibliography{memoire}
 \end{document}
