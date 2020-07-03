@@ -84,7 +84,7 @@ Nous entamerons ce rapport par une présentation des techniques permettant l'acq
 \listoffigures
 %% La liste des programmes est optionnelle (si votre rapport manque de
 %% contenu ajouter ce type de pages sera perçu négativement)
-\listofprograms
+%\listofprograms
 \mainmatter
 \chapter*{Introduction}
 \markboth{\sc Introduction}{}
@@ -108,7 +108,7 @@ Nous allons nous appuyer sur les nombreux outils développés dans le but de fac
 
 \section{Acquisition du son}
 
-Une membrane vibre sous l'effet de la pression acoustique et un dispositif qui dépend de la technologie du microphone convertit ces oscillations en signaux électriques. La conception d'un microphone comporte une partie acoustique et une partie électrique, qui vont définir ses caractéristiques et le type d'utilisation (https://fr.wikipedia.org/wiki/Microphone)
+Une membrane vibre sous l'effet de la pression acoustique et un dispositif qui dépend de la technologie du microphone convertit ces oscillations en signaux électriques. La conception d'un microphone comporte une partie acoustique et une partie électrique, qui vont définir ses caractéristiques et le type d'utilisation (https://fr.wikipedia.org/wiki/Microphone).
 
 \subsection{Type de microphone}
 
@@ -235,7 +235,24 @@ Le spectre finalement obtenu représente ainsi les informations phonétiques cit
 
 \subsubsection{SPro}
 
+SPro est une boîte à outils de traitement du signal vocal gratuit qui fournit des commandes d'exécution implémentant des algorithmes d'extraction de fonctionnalités standard pour les applications liées à la parole et une bibliothèque C pour implémenter de nouveaux algorithmes et utiliser des fichiers SPro dans vos propres programmes.
+
+SPro fournit des techniques d'extraction de fonctionnalités utilisées dans les applications vocales. Il existe des commandes pour les représentations suivantes:
+énergies de banc de filtres
+coefficients cepstraux
+représentation dérivée de prédiction linéaire
+
+
+\begin{enumerate}
+  \item filter-bank energies
+  \item cepstral coefficients
+  \item linear prediction derived representation
+\end{enumerate} 
+
+
 \subsubsection{Htk}
+
+HTK est une boîte à outils portable pour la construction et la manipulation de modèles de Markov cachés il se compose d'un ensemble de modules de bibliothèque et d'outils disponibles sous forme de source C. Les outils fournissent des installations sophistiquées pour l'analyse de la parole. HTK est principalement utilisé pour la recherche sur la reconnaissance vocale, bien qu'il ait été utilisé pour de nombreuses autres applications, notamment la recherche sur la synthèse vocale, la reconnaissance de caractères et le séquençage d'ADN
 
 % chapitre 1 section 3 : ############################################
 
@@ -245,79 +262,50 @@ Dans cette étape on réalise une association entre les segments élémentaires 
 
 \subsection{Approche statistique}
 
-L’RAS vise à convertir le signal vocal en texte et ce processus peut être formulé statistiquement comme suit. Soit un ensemble d'observations acoustiques O = (o1, o2, o3,…,on) (séquence de vecteurs de parole, où oi est le vecteur de parole observé à l'instant i), qui est la séquence de mots W = (w1, w2, …, Wn) qui a la probabilité maximale:
+L’RAS vise à convertir le signal vocal en texte et ce processus peut être formulé statistiquement comme suit. Soit un ensemble d'observations acoustiques O = (o1, o2, o3,…,on) (séquence de vecteurs de parole, où oi est le vecteur de parole observé à l'instant i), qui est la séquence de mots W = (w1, w2, …, Wn) qui a la probabilité maximale
 
-<equation1>
-
-L'équation (1) spécifie la séquence de mots la plus probable à l'aide de la règle de Bayes et P(O) - la probabilité d'énonciation de la parole - peut être ignorée, car elle est indépendante de la séquence W. Ainsi, (1) devient:
-
-<equation2>
-
-L'équation (2) contient deux facteurs qui peuvent être directement estimés: la probabilité a priori de la séquence de mots P (W) et la probabilité des données acoustiques, étant donné la séquence de mots P (O | W). Le premier facteur P (W) peut être estimé en utilisant uniquement un modèle de langage et le second facteur peut être calculé à partir du modèle acoustique. La numérisation à deux modèles doit être construite indépendamment, mais ils seront utilisés ensemble pour reconnaître un message parlé.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\linewidth]{fig/model.png}
-  \caption{Étapes du modèle statistique}
+  \caption{Etape modéle statistique}
 \end{figure}
 
 \subsubsection{Modèle de langue}
 
-Le modèle de langue décide si un mot (ou une phrase) est valide dans une langue donnée Un modèle de langage statistique est une distribution de probabilité sur des séquences de mots. Étant donné une telle séquence, disons de longueur m, il attribue une probabilité à la séquence entière.\\
+Le modèle de langue décide si un mot (ou une phrase) est valide dans une langue donnée Un modèle de langage statistique est une distribution de probabilité sur des séquences de mots. Étant donné une telle séquence, disons de longueur m, il attribue une probabilité à la séquence entière.
 
 \textbf{Unigram}
 
-Un modèle unigramme peut être traité comme la combinaison de plusieurs automates finis à un état. [1] Il divise les probabilités de différents termes dans un contexte, par exemple. de
-
-<equation3>
+Un modèle unigramme peut être traité comme la combinaison de plusieurs automates finis à un état. [1] Il divise les probabilités de différents termes dans un contexte.
 
 Dans ce modèle, la probabilité de chaque mot dépend uniquement de la probabilité de ce mot dans le document, de sorte que nous avons uniquement des automates finis à un état en tant qu'unités. L'automate lui-même a une distribution de probabilité sur tout le vocabulaire du modèle, en faisant un total de 1. Ce qui suit est une illustration du modèle unigramme d'un document.
 
-<tableau1>\\
 
 \textbf{n-gram}
 
-Dans un modèle à n-grammes, la probabilité P (w1, w2, wm) d’observer la phrase w1, w2, wm est approximée comme suit:
-
-<eq4>
+Dans un modèle à n-grammes on cherche la probabilité P (w1, w2,…, wm) d’observer la phrase w1, w2,…, wm
 
 On suppose que la probabilité d'observer le i-ème mot wi dans l'historique de contexte des mots i-1 précédents peut être approximée par la probabilité de l'observer dans l'historique de contexte raccourci des n-1 mots précédents (propriété de Markov d'ordre n) .
 
-La probabilité conditionnelle peut être calculée à partir des comptes de fréquence du modèle ngramme:
+La probabilité conditionnelle peut être calculée à partir des comptes de fréquence du modèle ngramme
 
-<eq5>
 
-Les termes modèles de langage bigram et trigram désignent les modèles à n-grammes avec n = 2 et n = 3, respectivement.\\
+Les termes modèles de langage bigram et trigram désignent les modèles à n-grammes avec n = 2 et n = 3, respectivement.
 
-\textbf{Exponentiel}
+\textbf{Exponential}
 
-Les modèles de langage d'entropie maximum codent la relation entre un mot et l'historique ngram à l'aide de fonctions. L'équation est :
+Les modèles de langage d'entropie maximum cherche à coder la relation entre un mot et l'historique ngram à l'aide de fonctions.
 
-<eq6>
+\textbf{Neural network}
 
-où Z (w1, w2, wm-1) est la fonction de partition, a est le vecteur de paramètre et f (w1, w2, wm) est la fonction de fonction. Dans le cas le plus simple, la fonction caractéristique n'est qu'un indicateur de la présence d'un certain n-gramme. Il est utile d’utiliser un préalable sur un ou une forme de régularisation. Le modèle log-bilinéaire est un autre exemple de modèle de langage exponentiel.\\
+La probabilité d'une séquence de mots peut être obtenue à partir de la probabilité de chaque mot étant donné le contexte des mots qui le précèdent, en utilisant la règle de probabilité en chaîne (une conséquence du théorème de Bayes)
 
-\textbf{Réseau de neurones}
+La plupart des modèles de langage probabilistes (y compris les modèles de langage réseau neuronal publiés) approchent la probabilité en utlisant un contexte fixe de taille n - 1, c'est-à-dire en utilisant <eq9>, comme en n-grammes.
 
-La probabilité d'une séquence de mots peut être obtenue à partir de la probabilité de chaque mot étant donné le contexte des mots qui le précèdent, en utilisant la règle de probabilité en chaîne (une conséquence du théorème de Bayes):
+Dans le modèle introduit dans (Bengio et al 2001, Bengio et al 2003), la prédiction probabiliste <eq10> est obtenue comme suit. Tout d'abord, chaque mot wt - i (représenté par un entier dans [1, N]) dans le contexte de n-1 mot est mappé sur un vecteur de caractéristique ddimensionnel associé Cwt - i, qui est la colonne wt - i de la matrice de paramètres C. Le vecteur Ck contient les fonctions apprises pour le mot k. 
 
-<eq7>
 
-La plupart des modèles de langage probabilistes (y compris les modèles de langage réseau neuronal publiés) approchent <eq8> en utlisant un contexte fixe de taille n - 1, c'est-à-dire en utilisant <eq9>, comme en n-grammes.
-
-Dans le modèle introduit dans (Bengio et al 2001, Bengio et al 2003), la prédiction probabiliste <eq10> est obtenue comme suit. Tout d'abord, chaque mot wt - i (représenté par un entier dans [1, N]) dans le contexte de n-1 mot est mappé sur un vecteur de caractéristique ddimensionnel associé Cwt - i, qui est la colonne wt - i de la matrice de paramètres C. Le vecteur Ck contient les fonctions apprises pour le mot k. Soit le vecteur x la concaténation de ces n-1 vecteurs de caractéristiques:
-
-<eq11>
-
-La prédiction probabiliste du mot suivant, à partir de x, est ensuite obtenue à l'aide d'une architecture de réseau de neurones artificielle standard pour la classification probabiliste, à l'aide de la fonction d'activation softmax au niveau des unités de sortie (Bishop, 1995):
-
-<eq12>
-
-où
-
-<eq13>
-
-où les vecteurs b, c et les matrices W, V sont également des paramètres (en plus de la matrice C). Notons <eq14>  pour la concaténation de tous les paramètres. La capacité du modèle est contrôlée par le nombre d'unités cachées h et par le nombre de fonctions de mots apprises d.
 
 \subsubsection{Modéle acoustique}
 
@@ -325,9 +313,9 @@ Le modèle acoustique doit estimer la probabilité de prononcer un message, à p
 
 Pour tout w donné, le modèle acoustique correspondant est synthétisé en concaténant des modèles de téléphone pour créer des mots tels que définis par un dictionnaire de prononciation.
 
-Un modèle acoustique est utilisé dans la reconnaissance automatique de la parole pour représenter la relation entre un signal audio et les phonèmes ou autres unités linguistiques qui composent la parole. Le modèle est appris à partir d'un ensemble d'enregistrements audio et de leurs transcriptions correspondantes. Il est créé en prenant des enregistrements audio de la parole et leurs transcriptions de texte, et en utilisant un logiciel pour créer des représentations statistiques des sons qui composent chaque mot.\\
+Un modèle acoustique est utilisé dans la reconnaissance automatique de la parole pour représenter la relation entre un signal audio et les phonèmes ou autres unités linguistiques qui composent la parole. Le modèle est appris à partir d'un ensemble d'enregistrements audio et de leurs transcriptions correspondantes. Il est créé en prenant des enregistrements audio de la parole et leurs transcriptions de texte, et en utilisant un logiciel pour créer des représentations statistiques des sons qui composent chaque mot.
 
-\textbf{HMM (hidden markov model)}
+\textbf{HMM ( hidden markov model )}
 
 Une chaîne de Markov contient tous les états possibles d'un système et la probabilité de passer d'un état à un autre.
 
@@ -337,24 +325,45 @@ Une chaîne de Markov contient tous les états possibles d'un système et la pro
   \caption{Chaîne de Markov}
 \end{figure}
 
-A first-order Markov chain assumes that the next state depends on the current state only. For simplicity, we often call it a Markov chain
 
-<eq14>
+Ce modèle sera beaucoup plus facile à manipuler. Cependant, dans de nombreux systèmes ML, tous les états ne sont pas observables et nous appelons ces états états cachés ou états internes. Certains peuvent les traiter comme des facteurs latents pour les intrants. Par exemple, il peut être difficile de savoir si je suis heureuse ou triste. Mon état interne sera {H ou S}. Mais nous pouvons obtenir des indications de ce que nous observons. Par exemple, lorsque je suis heureux, j'ai 0,2 chance de regarder un film, mais quand je suis triste, cette chance monte à 0,4. La probabilité d'observer un observable étant donné un état interne s'appelle la probabilité d'émission. La probabilité de passer d'un état interne à un autre s'appelle la probabilité de transition. Les modèles acoustiques les plus utilisés sont :
 
-Ce modèle sera beaucoup plus facile à manipuler. Cependant, dans de nombreux systèmes ML, tous les états ne sont pas observables et nous appelons ces états états cachés ou états internes. Certains peuvent les traiter comme des facteurs latents pour les intrants. Par exemple, il peut être difficile de savoir si je suis heureuse ou triste. Mon état interne sera {H ou S}. Mais nous pouvons obtenir des indications de ce que nous observons. Par exemple, lorsque je suis heureux, j'ai 0,2 chance de regarder un film, mais quand je suis triste, cette chance monte à 0,4. La probabilité d'observer un observable étant donné un état interne s'appelle la probabilité d'émission. La probabilité de passer d'un état interne à un autre s'appelle la probabilité de transition.
 
-\textbf{Modéle acoustique HMM/GMM}
+\begin{enumerate}
 
-\textbf{Modéle acoustique HMM/DNN}
+\item Modéle acoustique HMM/GMM
+\item Modéle acoustique HMM/DNN
 
-\textbf{Modèle Phonétique}
+\end{enumerate}
+
 
 \subsection{Approche par réseau de neurones}
 
-\subsection{Approche par Dynamic time wrapping approch}
+L'approche à base de réseau de neurones consiste à mettre en place un modèle de bout en bout qui englobe de plus en plus de composants dans le pipeline de l'approche statistique. Les 2 plus populaires sont (1) la classification temporelle connexionniste (CTC), qui est largement utilisée de nos jours chez Baidu et Google, mais elle nécessite beaucoup de training ; et (2) séquence à séquence (Seq-2-Seq), qui ne nécessite pas de personnalisation manuelle.
+La motivation de base est que nous voulons faire de la reconnaissance vocale de bout en bout. On nous donne l'audio X - qui est une séquence d'images de x1 à xT, et le texte de sortie correspondant Y - qui est une séquence de y1 à yL. Y est juste une séquence de texte (transcription) et X est le spectrogramme traité audio. Nous voulons effectuer la reconnaissance vocale en apprenant un modèle probabiliste p (Y | X): en commençant par les données et en prédisant les séquences cibles elles-mêmes.
+
+
+\subsection{Approche par Dynamic time wrapping approch(DTW)}
+DTW est une méthode pour mesurer la similitude d'un modèle avec différents amplitude. Plus la distance produite est petite, plus les deux motifs sonores sont similaires. Les deux modèles sonores sont similaires, donc les deux voix sont censées être les mêmes. Les données initiales sur le processus de reconnaissance vocale sont transformées en ondes de fréquence. Le volume de prononciation, le temps de prononciation et le bruit du son autour de l'enregistrement affectent la distance générée. Plus l'effet est petit, plus la distance qui sera générée sera petite.
 
 \subsection{Outils d'apprentissage de modéle}
+Plusieurs outil sont disponible pour la partie apprentissage et construction de modèle , on peut citer : speech-recognition , sci-py , alize , htk et autre.
 
+\subsubsection{ALIZE}
+
+ALIZÉ est une plateforme open source pour la reconnaissance des locuteurs. Le but de ce projet est de fournir un ensemble de cadres de bas niveau et de haut niveau qui permettront à quiconque de développer des applications gérant les différentes tâches dans le domaine de la reconnaissance des locuteurs.Grâce au projet Android-ALIZÉ, ALIZÉ peut également être intégré dans des applications mobiles fonctionnant sur la plateforme Android. En plus de ce noyau a été construit LIA-RAL, une boîte à outils offrant des fonctionnalités de niveau supérieur. LIA-RAL est lui-même composé de plusieurs composants:
+
+\begin{enumerate}
+
+\item LIA-SpkDet : un ensemble d'outils pour effectuer toutes les tâches requises par un système d'authentification de locuteur - formation de modèles, normalisation des fonctionnalités, normalisation des scores, etc.
+\item LIA-SpkSeg: Outils pour la diarisation des locuteurs.
+\item LIA-Utils: Utilitaires pour manipuler les différents formats de données utilisés dans ALIZÉ
+\item LIA-SpkTools: La bibliothèque sur laquelle les autres parties sont basées; il fournit des fonctions de haut niveau par-dessus ALIZE-core.
+
+\end{enumerate}
+
+\subsubsection{Htk}
+HTK est une boîte à outils pour la recherche en reconnaissance automatique de la parole et a été utilisée dans de nombreux groupes de recherche commerciaux et universitaires pendant de nombreuses années le logiciel prend en charge les HMM en utilisant à la fois des mélanges gaussiens à densité continue et des distributions discrètes et peut être utilisé pour construire des systèmes HMM complexes.
 
 % chapitre 4 : Programme, outils, données
 \chapter{Mise en place du projet}
@@ -384,8 +393,8 @@ Il existe diverses bases de données, accessibles sur internet, contenant des é
 
 Pour ce projet, nous avons récupéré une base de données composée d'enregistrements vocaux en anglais, de 106 personnes différentes. Chacune de ces personnes effectue 10 enregistrements, avec 2 textes différents :
 \begin{itemize}
-  \item 5 enregistrements dans lesquels des chiffres sont répétés ("\textit{5 0 6 9 2 8 1 3 7 4}")
-  \item 5 enregistrements dans lesquels une phrases est dite ("\textit{Joe took father’s green shoe bench out}")
+  \item 5 enregistrements dans lesquels des chiffres sont répétés (\guillemotleft{}~5 0 6 9 2 8 1 3 7 4~\guillemotright{})
+  \item 5 enregistrements dans lesquels une phrases est dite (\guillemotleft{}~Joe took father’s green shoe bench out~\guillemotright{})
 \end{itemize}
 
 Pour chaque type de texte, le premier enregistrement est toujours réalisé dans un lieu sans bruit, puis les quatre autres sont fait dans des conditions réelles (bureau, lieu public, etc), ce qui permet d'avoir des qualités d'enregistrement variées.\\
@@ -412,18 +421,28 @@ Nous avons donc 530 échantillons de voix, que nous allons alors diviser en 2 :
 \end{itemize}
 
 \subsection{Extraction des caractéristiques des données}
+L’extraction des paramètres spectraux des signaux sonores consiste à obtenir les vecteurs acoustiques stockés dans des fichiers .prm. Nous avons opter d'utiliser mfcc avec 20 coefficients cepstrales. Spro fournit la commande "sfbcep" basée sur filter-bank. Cette commande prend en entrée un signal et sort un fichier de données FBCEPSTRA SPro. Pour chaque trame du signal, une analyse de filter-bank est effectuée et une transformée en cosinus discrète est appliquée à la sortie. Les vecteurs  sont calculés toutes les 10 ms en utilisant une fenêtre d'analyse se chevauchant de 25 ms.
 
 \subsection{Normalisation des caractéristiques}
+
+La normalisation est une technique souvent appliquée dans le cadre de la préparation des données pour l'apprentissage automatique. Le but de la normalisation est de changer les valeurs des colonnes numériques de l'ensemble de données à une échelle commune, sans fausser les différences dans les plages de valeurs. Dans notre cas le volume (  amplitude ) des enregistrements peut varier , on peut avoir un enregistrement avec une voix haute ou à voix faible ainsi il est nécessaire de faire une normalisation.
+
+Le résultat de cette étape nous permet d'avoir des nouveaux fichiers .norm.prm qu’on va stocker dans les mêmes répertoires prm ainsi que des fichiers d'étiquettes indiquant l'étiquette temporelle des trames vocales dans ./data/lbl/
 
 \subsection{Entraînement des modèles}
 
 À l'aide des outils disponibles avec Alize, nous allons pouvoir créer des modèles correspondants à nos locuteurs. Ces modèles seront utilisés par la suite pour effectuer des comparaisons entre différentes voix et déterminer l'identité des personnes à qui elles appartiennent. Il est à noté qu'entraîner les modèles nécessaires pour ce genre de projet nécessite une certaines puissance de calcul, et que plus nous avons de données à traiter, plus ce calcul sera long.
 
+
+\subsection{Entraînement des modèles}
+
+À l'aide des outils disponibles avec ALIZÉ, nous allons pouvoir créer des modèles correspondants à nos locuteurs. Ces modèles seront utilisés par la suite pour effectuer des comparaisons entre différentes voix et déterminer l'identité des personnes à qui elles appartiennent. Il est à noté qu'entraîner les modèles nécessaires pour ce genre de projet nécessite une certaines puissance de calcul, et que plus nous avons de données à traiter, plus ce calcul sera long.
+
 \subsubsection{Modèle du monde}
 
 Tout d'abord, nous allons créer un modèle de locuteur \textit{général}. Cette étape nous permettra de générer un modèle universel (\textit{Universal Background Model)}, qui nous permettra d'obtenir une représentation des caractéristiques qui forment la parole. Ce dernier est entraîné en utilisant l'ensemble des fichiers correspondants aux locuteurs dont nous disposons. 
 
-Nous utilisons le programme \guillemotleft{}~TrainWorld~\guillemotright{}, présent dans Alize / \texttt{LIA\_RAL}, afin de créer ce modèle.
+Nous utilisons le programme \guillemotleft{}~TrainWorld~\guillemotright{}, présent dans ALIZÉ / \texttt{LIA\_RAL}, afin de créer ce modèle.
 
 \subsubsection{Modèle pour chaque locuteur}
 
@@ -445,7 +464,7 @@ Nous faisons en sorte que chaque modèle qui sera crée utilise les 5 enregistre
 
 \subsection{Test des modèles}
 
-Une fois les modèles de chaque locuteur entraînés, il convient de les tester, afin de déterminer leur performance et la justesse des résultats produits. Ici encore, Alize nous donne accès à des outils permettant de réaliser ces tests. Il s'agit en l'occurrence du programme \guillemotleft{}~ComputTest~\guillemotright{}. Ce dernier va utiliser les modèles des locuteurs et les comparer avec des échantillons de voix de test, afin de générer des scores correspondant au taux de probabilité que les 2 appartiennent à la même personne.
+Une fois les modèles de chaque locuteur entraînés, il convient de les tester, afin de déterminer leur performance et la justesse des résultats produits. Ici encore, ALIZÉ nous donne accès à des outils permettant de réaliser ces tests. Il s'agit en l'occurrence du programme \guillemotleft{}~ComputTest~\guillemotright{}. Ce dernier va utiliser les modèles des locuteurs et les comparer avec des échantillons de voix de test, afin de générer des scores correspondant au taux de probabilité que les 2 appartiennent à la même personne.
 
 Ce programme nécessite lui aussi un fichier de configuration de type \guillemotleft{}~.ndx~\guillemotright{}. Nous allons, là aussi, automatiser sa création à l'aide d'un script.\\
 
@@ -508,7 +527,7 @@ De plus, nous avons pu voir les différents domaines et les différentes platefo
 
 Aussi, une fois le programme réalisé, nous avons pu analyser les résultats produits et déterminer qu'ils étaient grandement améliorables.\\
 
-Ces améliorations pourraient être apportées sur de prochains travaux de ce type, notamment au niveau de la réflexion quant aux outils ou techniques utilisés, qui offrent des possibilités très vastes, dont nous aurions pu tirer un peu plus parti. De plus, des considérations quant a la plateforme d'utilisation du programme pourraient être intéressantes, puisque Alize dispose par exemple d'outils permettant son utilisation su système Android.
+Ces améliorations pourraient être apportées sur de prochains travaux de ce type, notamment au niveau de la réflexion quant aux outils ou techniques utilisés, qui offrent des possibilités très vastes, dont nous aurions pu tirer un peu plus parti. De plus, des considérations quant a la plateforme d'utilisation du programme pourraient être intéressantes, puisque ALIZÉ dispose par exemple d'outils permettant son utilisation su système Android.
 
 \begin{thebibliography}{9}
 \bibitem{tp-exemple} 
@@ -553,12 +572,6 @@ University Of Computer Science of Vienna (ICT), feb 2015.
 Anthony Larcher, Jean-François Bonastre, Benoît Fauve, Kong Aik Lee, Christophe Levy, Haizhou Li, John Mason, Jean-Yves Parfait.
 \textit{ALIZE 3.0-Open Source Toolkit for State-of-the-Art Speaker Recognition}. 
 Annual Conference of the International Speech Communication Association, Aug 2013, Lyon, France.
-
-\bibitem{latexcompanion} 
-Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
-\textit{The \LaTeX\ Companion}. 
-Addison-Wesley, Reading, Massachusetts, 1993.
-
 \end{thebibliography}
 
 %\bibliographystyle{alpha}
