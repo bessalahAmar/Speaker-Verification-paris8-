@@ -24,6 +24,7 @@
 \newcounter{program}[subsection]
 \renewcommand{\theprogram}{\arabic{chapter}.\arabic{program}}
 
+
 \newenvironment{program}[1]{
   \if\relax\detokenize{#1}\relax
   \gdef\mycaption{\relax}
@@ -109,31 +110,33 @@ L'objectif final étant de pouvoir répondre à la question "Qui parle ?".\\
 
 Nous allons nous appuyer sur les nombreux outils développés dans le but de faciliter le traitement de la parole, et ainsi réaliser notre propre programme d'identification de locuteur.
 
-% chapitre 1 : ############################################
+% chapitre 1 section 1 : ############################################
 
-\chapter{Acquisition du son}
+\chapter{Etat de l'art}
+
+\section{Acquisition du son}
 
 Une membrane vibre sous l'effet de la pression acoustique et un dispositif qui dépend de la technologie du microphone convertit ces oscillations en signaux électriques. La conception d'un microphone comporte une partie acoustique et une partie électrique, qui vont définir ses caractéristiques et le type d'utilisation. ( https://fr.wikipedia.org/wiki/Microphone)
 
-\section{Type de microphone}
+\subsection{Type de microphone}
 
 Le choix du microphone dépend des applications de notre modèle de reconnaissances , dans le cas ou on favorise d’une source émettrice loin ou proche avec beaucoup de bruit ou peu. 
 
 
-\subsection{Microphones dynamiques}
+\subsubsection{Microphones dynamiques}
 
 Les microphones dynamiques utilisent un ensemble diaphragme / bobine acoustique / aimant qui forme un générateur électrique miniature piloté par le son. Les ondes sonores frappent une fine membrane de plastique (diaphragme) qui vibre en réponse. Une petite bobine de fil (bobine mobile) est fixée à l'arrière du diaphragme et vibre avec ce dernier. La bobine acoustique elle-même est entourée d'un champ magnétique créé par un petit aimant permanent. C'est le mouvement de la bobine acoustique dans ce champ magnétique qui génère le signal électrique correspondant au son capté par un microphone dynamique. Les microphones dynamiques ont une construction relativement simple et sont donc économiques et robustes. Ils peuvent fournir une excellente qualité sonore et de bonnes spécifications dans tous les domaines de la performance du microphone. En particulier, ils peuvent gérer des niveaux sonores extrêmement élevés: il est presque impossible de surcharger un microphone dynamique. De plus, les microphones dynamiques sont relativement peu affectés par les extrêmes de température et d'humidité. La dynamique est le type le plus utilisé dans le renforcement acoustique général.
 
 
-\subsection{Microphones à condensateur}
+\subsubsection{Microphones à condensateur}
 
 Les microphones à condensateur sont basés sur un assemblage diaphragme / plaque arrière chargé électriquement qui forme un condensateur sensible au son. Ici, les ondes sonores font vibrer un diaphragme très fin en métal ou en plastique recouvert de métal. Le diaphragme est monté juste devant une plaque arrière en métal rigide ou en céramique revêtue de métal. En termes électriques, cet ensemble ou élément est appelé un condensateur (appelé historiquement un "condensateur"), qui a la capacité de stocker une charge ou une tension. Lorsque l'élément est chargé, un champ électrique est créé entre le diaphragme et la plaque arrière, proportionnel à leur espacement. C’est la variation de cet espacement, due au mouvement du diaphragme par rapport à la plaque arrière, qui produit le signal électrique correspondant au son capté par un microphone à condensateur. La construction d’un microphone à condensateur doit inclure une disposition permettant de maintenir la charge électrique ou la tension de polarisation. Un microphone à condensateur électret a une charge permanente, maintenue par un matériau spécial déposé sur la plaque arrière ou sur le diaphragme. Les types non-électret sont chargés (polarisés) au moyen d'une source d'alimentation externe. La majorité des microphones à condensateur pour l’amplification du son sont du type électret. Tous les condenseurs contiennent des circuits actifs supplémentaires permettant à la sortie électrique de l'élément d'être utilisée avec des entrées de microphone classiques. Cela nécessite que tous les microphones à condensateur soient alimentés: soit par piles, soit par alimentation fantôme (méthode consistant à alimenter un microphone par le câble du microphone lui-même). Les microphones à condensateur présentent deux limitations potentielles dues aux circuits supplémentaires: premièrement, les composants électroniques produisent une faible quantité de bruit; deuxièmement, il existe une limite au niveau de signal maximal que l’électronique peut gérer. Pour cette raison, les spécifications du microphone à condensateur incluent toujours un facteur de bruit et un niveau sonore maximal. Les bonnes conceptions, cependant, ont des niveaux de bruit très bas et sont également capables de très grande plage dynamique.
 
-\subsection{Différence entre microphones à condensateur et microphone dynamique}
+\subsubsection{Différence entre microphones à condensateur et microphone dynamique}
 
 Les microphones à condensateur sont plus complexes que les dynamiques et ont tendance à être un peu plus coûteux. De plus, les condenseurs peuvent être affectés par des températures et des taux d'humidité extrêmes, ce qui peut les rendre bruyants ou en panne de façon temporaire. Cependant, les condenseurs peuvent facilement être fabriqués avec une sensibilité plus élevée et peuvent fournir un son plus doux et plus naturel, en particulier à des fréquences élevées. La réponse en fréquence plate et la plage de fréquence étendue sont beaucoup plus faciles à obtenir dans un condenseur. De plus, les microphones à condensateur peuvent être très petits sans perte significative de performances. Image Microphone à condensateur La décision d’utiliser un microphone à condensateur ou dynamique dépend non seulement de la source sonore et du système de renforcement acoustique, mais également du réglage physique. D'un point de vue pratique, si le microphone doit être utilisé dans un environnement sévère tel qu'un club de rock'n'roll ou pour le son en extérieur, des types dynamiques constitueront un bon choix. Dans un environnement plus contrôlé, tel qu'une salle de concert ou une configuration théâtrale, un microphone à condensateur peut être préféré pour de nombreuses sources sonores, en particulier lorsque la qualité sonore optimale est désirée. (https://www.shure.com/en-US/support/find-an-answer/difference-between-a-dynamic-andcondenser-microphone)
 
-\section{Etape de traitement du son}
+\subsection{Etape de traitement du son}
 
 Le traitement numérique du signal par ordinateur exige que le signal soit converti en une suite de nombres (numérisation). Cette conversion se décompose, sur le plan théorique, en trois opérations
 
@@ -143,27 +146,28 @@ Le traitement numérique du signal par ordinateur exige que le signal soit conve
   \caption{étape de traitement du son}
 \end{figure}
 
-\subsection{Échantillonnage}
+\subsubsection{Échantillonnage}
 
 L'échantillonnage consiste à prélever les valeurs d'un signal à intervalles définis, généralement réguliers. Il produit une suite de valeurs discrètes nommées échantillons.(https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal))
 
-\subsubsection{Cadence d'échantillonnage : ( théoreme de Shannon-Nyquist )}
+\textbf{Cadence d'échantillonnage : ( théoreme de Shannon-Nyquist )}
 
 si toutes les fréquences du signal sont inférieures à la moitié de la fréquence d'échantillonnage, il peut être parfaitement reconstitué ( frequence d’échantionnage = 2x frequenceMax du signal )
 
-\subsection{Quantification (conversion analogique numérique)}
+\subsubsection{Quantification (conversion analogique numérique)}
 En traitement des signaux, la quantification est le procédé qui permet d'approcher un signal continu par les valeurs d'un ensemble discret d'assez petite taille. L’amplitude relevée à chaque étape d’échantillonnage va être codée en binaire sur un certain nombre de bits : 8, 16, 24, 32… C’est la quantification. Là encore, plus le nombre de bits va être élevé, plus la valeur numérique de l’amplitude sera proche de la valeur originale.
 
-\subsection{Compression}
+\subsubsection{Compression}
 La compression audio est une forme de compression de données qui a pour but de réduire la taille d'un flux audio numérique en vue d'une transmission (contraintes de largeur de bande et de débit) ou d'un stockage (contrainte d'espace de stockage). On distingue la compression sans perte, qui permet de reconstituer exactement les données d'origine, de la compression en général, « avec pertes », qui abandonne des données jugées non nécessaires à l'écoute, au profit de la diminution du débit ou de la taille des fichiers. 
 
-% chapitre 2 : ############################################
 
-\chapter{Extraction de paramètres}
+% chapitre 1  section 2: ############################################
+
+\section{Extraction de paramètres}
 
 Une fois l’enregistrement audio effectué, il sera traité afin d’obtenir des données utilisables par un programme informatique (conversion d’un signal analogique vers un signal numérique/digital).
 
-\section{Reconnaissance vocale – Paramétrisation / traitement}
+\subsection{Reconnaissance vocale – Paramétrisation / traitement}
 
 Le traitement de l’enregistrement obtenu passe par l’analyse de plusieurs paramètres qui le composent (volume sonore, bruits de fond, intonation, etc), appelés traits prosodiques. Les différents traits prosodiques (paramètres prosodiques) :
 
@@ -179,11 +183,11 @@ Le traitement de l’enregistrement obtenu passe par l’analyse de plusieurs pa
 
 Ces caractéristiques vont influer sur la manière dont certains sons vont être interprétés par le programme de reconnaissance vocale.
 
-\section{Algorithmes de traitement du signal audio}
+\subsection{Algorithmes de traitement du signal audio}
 
 Afin de traiter le signal audio, il lui sera appliqué un algorithme spécifiquement crée pour ce type de signal. Il en existe plusieurs, certains plus efficaces selon la clarté de l’enregistrement, la présence de bruit, etc. Le signal ne sera pas traiter en un seul bloc, mais sera découpé en plusieurs segments (selon un intervalle de temps ou selon un intervalle de sons) de même longueur (environ 20 à 25 millisecondes) et qui se superposeront (la fin d’un segment – les 10 dernières millisecondes – et le début du segment suivant – les 10 premières millisecondes – seront à cheval sur les mêmes données). De cette manière, nous pouvons travailler sur des échantillons de sons plus petits et obtenir un résultat plus précis après traitement.
 
-\subsection{Transformation de Fourier}
+\subsubsection{Transformation de Fourier}
 
 C’est l’une des opération les plus fréquemment effectuée pour le traitement des signaux. Elle permet de passer de la représentation temporelle d’un signal à sa représentation fréquentielle / spectrale.
 
@@ -193,17 +197,17 @@ C’est l’une des opération les plus fréquemment effectuée pour le traiteme
   \caption{Transformation d’un signal}
 \end{figure}
 
-\subsection{Transformation de Fourier discrète}
+\subsubsection{Transformation de Fourier discrète}
 
 La transformation de Fourier discrète (TFD ou DFT en anglais) est un outil mathématique de traitement du signal numérique, qui est l'équivalent discret de la transformation de Fourier continue qui est utilisée pour le traitement du signal analogique. Elle est typiquement utilisée sur des sons.
 
-\subsection{Codage prédictif linéaire (LPC – Linear Predictive Coding)}
+\subsubsection{Codage prédictif linéaire (LPC – Linear Predictive Coding)}
 
 Le codage prédictif linéaire est une méthode de codage et de représentation de la parole. Elle est appliquée sur un signal, afin d’en obtenir un modèle.
 
 « Elle repose principalement sur l’hypothèse que la parole peut être modélisée par un processus linéaire. Il s’agit donc de prédire le signal à un instant n à partir des p échantillons précédents. La parole n’étant cependant pas un processus parfaitement linéaire, la moyenne que constitue la somme pondérée du signal sur p pas de temps introduit une erreur qu’il est nécessaire de corriger par l’introduction du terme e(n). » .
 
-\subsection{MFCC - Mel Frequency Cepstral Coefficients}
+\subsubsection{MFCC - Mel Frequency Cepstral Coefficients}
 
 Le MFCC permet d’appliquer des transformations à un signal (semblables à une transformation de Fourier), afin d’en obtenir une modélisation sous forme d’un spectre. C’est actuellement le plus utilisé pour les programmes de reconnaissance vocale.
 
@@ -216,28 +220,33 @@ son spectre sera plus précis et aura un aspect très proche de ce qui serait pe
   \caption{Etape du calcul des coefficients MFCC}
 \end{figure}
 
-\subsubsection{Efficacité de MFCC}
+\textbf{Efficacité de MFCC}
 
 MFCC est considéré comme très efficace lorsqu’il est appliqué sur un enregistrement propre (pas de bruits de fond, bon volume vocal, etc), mais moins robuste lors de présence de bruit.
 
 On notera néanmoins que l’analyse MFCC Aurora a été développée de manière à effectuer un dé-bruitage sur un tel signal.
 
-\subsubsection{Exemple de mise en place}
+\textbf{Exemple de mise en place}
 
 (page 16) : https://hal.inria.fr/tel-01251128/document
 
-\subsubsection{Résultat}
+\textbf{Résultat}
 
 Le spectre finalement obtenu représente ainsi les informations phonétiques citées précédemment (traits prosodiques). Nous pouvons alors utiliser les valeurs de ce spectre afin d’effectuer les opérations voulues (modification du signal, récupération d’un d’un son, etc).
 
+\subsection{Outils d'extraction des features}
 
-% chapitre 3 : ############################################
+\subsubsection{SPro}
 
-\chapter{Apprentissage du modéle}
+\subsubsection{Htk}
+
+% chapitre 1 section 3 : ############################################
+
+\section{Apprentissage du modéle}
 
 Dans cette étape on réalise une association entre les segments élémentaires de la parole et les éléments lexicaux. Cette association fait appel à une modélisation statistique ou par réseaux de neurones artificiels ou par algorithme de déformation temporelle dynamique
 
-\section{Approche statistique}
+\subsection{Approche statistique}
 
 L’RAS vise à convertir le signal vocal en texte et ce processus peut être formulé statistiquement comme suit. Soit un ensemble d'observations acoustiques O = (o1, o2, o3,…,on) (séquence de vecteurs de parole, où oi est le vecteur de parole observé à l'instant i), qui est la séquence de mots W = (w1, w2, …, Wn) qui a la probabilité maximale:
 
@@ -255,11 +264,11 @@ L'équation (2) contient deux facteurs qui peuvent être directement estimés: l
   \caption{Etape modéle statistique}
 \end{figure}
 
-\subsection{Modèle de langue}
+\subsubsection{Modèle de langue}
 
 Le modèle de langue décide si un mot (ou une phrase) est valide dans une langue donnée Un modèle de langage statistique est une distribution de probabilité sur des séquences de mots. Étant donné une telle séquence, disons de longueur m, il attribue une probabilité à la séquence entière.
 
-\subsubsection{Unigram}
+\textbf{Unigram}
 
 Un modèle unigramme peut être traité comme la combinaison de plusieurs automates finis à un état. [1] Il divise les probabilités de différents termes dans un contexte, par exemple. de
 
@@ -269,7 +278,7 @@ Dans ce modèle, la probabilité de chaque mot dépend uniquement de la probabil
 
 <tableau1>
 
-\subsubsection{n-gram}
+\textbf{n-gram}
 
 Dans un modèle à n-grammes, la probabilité P (w1, w2,…, wm) d’observer la phrase w1, w2,…, wm est approximée comme suit:
 
@@ -283,7 +292,7 @@ La probabilité conditionnelle peut être calculée à partir des comptes de fr�
 
 Les termes modèles de langage bigram et trigram désignent les modèles à n-grammes avec n = 2 et n = 3, respectivement.
 
-\subsubsection{Exponential}
+\textbf{Exponential}
 
 Les modèles de langage d'entropie maximum codent la relation entre un mot et l'historique ngram à l'aide de fonctions. L'équation est :
 
@@ -291,7 +300,7 @@ Les modèles de langage d'entropie maximum codent la relation entre un mot et l'
 
 où Z (w1, w2,…, wm-1) est la fonction de partition, a est le vecteur de paramètre et f (w1, w2,… wm) est la fonction de fonction. Dans le cas le plus simple, la fonction caractéristique n'est qu'un indicateur de la présence d'un certain n-gramme. Il est utile d’utiliser un préalable sur un ou une forme de régularisation. Le modèle log-bilinéaire est un autre exemple de modèle de langage exponentiel.
 
-\subsubsection{Neural network}
+\textbf{Neural network}
 
 La probabilité d'une séquence de mots peut être obtenue à partir de la probabilité de chaque mot étant donné le contexte des mots qui le précèdent, en utilisant la règle de probabilité en chaîne (une conséquence du théorème de Bayes):
 
@@ -313,7 +322,7 @@ où
 
 où les vecteurs b, c et les matrices W, V sont également des paramètres (en plus de la matrice C). Notons <eq14>  pour la concaténation de tous les paramètres. La capacité du modèle est contrôlée par le nombre d'unités cachées h et par le nombre de fonctions de mots apprises d.
 
-\subsection{Modéle acoustique}
+\subsubsection{Modéle acoustique}
 
 Le modèle acoustique doit estimer la probabilité de prononcer un message, à partir d'une séquence de mots.
 
@@ -321,7 +330,7 @@ Pour tout w donné, le modèle acoustique correspondant est synthétisé en conc
 
 Un modèle acoustique est utilisé dans la reconnaissance automatique de la parole pour représenter la relation entre un signal audio et les phonèmes ou autres unités linguistiques qui composent la parole. Le modèle est appris à partir d'un ensemble d'enregistrements audio et de leurs transcriptions correspondantes. Il est créé en prenant des enregistrements audio de la parole et leurs transcriptions de texte, et en utilisant un logiciel pour créer des représentations statistiques des sons qui composent chaque mot.
 
-\subsubsection{HMM ( hidden markov model )}
+\textbf{HMM ( hidden markov model )}
 
 Une chaîne de Markov contient tous les états possibles d'un système et la probabilité de passer d'un état à un autre.
 
@@ -337,15 +346,17 @@ A first-order Markov chain assumes that the next state depends on the current st
 
 Ce modèle sera beaucoup plus facile à manipuler. Cependant, dans de nombreux systèmes ML, tous les états ne sont pas observables et nous appelons ces états états cachés ou états internes. Certains peuvent les traiter comme des facteurs latents pour les intrants. Par exemple, il peut être difficile de savoir si je suis heureuse ou triste. Mon état interne sera {H ou S}. Mais nous pouvons obtenir des indications de ce que nous observons. Par exemple, lorsque je suis heureux, j'ai 0,2 chance de regarder un film, mais quand je suis triste, cette chance monte à 0,4. La probabilité d'observer un observable étant donné un état interne s'appelle la probabilité d'émission. La probabilité de passer d'un état interne à un autre s'appelle la probabilité de transition.
 
-\subsubsection{Modéle acoustique HMM/GMM}
+\textbf{Modéle acoustique HMM/GMM}
 
-\subsubsection{Modéle acoustique HMM/DNN}
+\textbf{Modéle acoustique HMM/DNN}
 
-\subsection{Modèle Phonétique}
+\textbf{Modèle Phonétique}
 
-\section{Approche par réseau de neurones}
+\subsection{Approche par réseau de neurones}
 
-\section{Approche par Dynamic time wrapping approch}
+\subsection{Approche par Dynamic time wrapping approch}
+
+\subsection{Outils d'apprentissage de modéle}
 
 
 % chapitre 4 : Programme, outils, données
