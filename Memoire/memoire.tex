@@ -38,29 +38,31 @@
     \item[\codesource \theprogram]--~\mycaption
   \end{description}
 }
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 \begin{document}
 \begin{titlepage}
   \begin{center}
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \includegraphics[height=1.5cm]{images/m2ise.png}~--~ou~--~\includegraphics[height=1.5cm]{images/m1info.png}&
-      \includegraphics[height=1.5cm]{images/oaccueil.png}
+      \includegraphics[height=2cm]{images/m2ise.png}&
+      \includegraphics[height=2.5cm]{images/p8.png}
     \end{tabular*}
     \small 
     \rule{\textwidth}{.5pt}~\\
     \large 
     \textsc{Université Paris 8 - Vincennes à Saint-Denis}\vspace{0.5cm}\\
-    \textbf{Master Informatique des Systèmes Embarqués}\vspace{3.0cm}\\
+    \textbf{Master 2 : Informatique des Systèmes Embarqués}\vspace{3.0cm}\\
     \Large
     \textbf{Reconnaissance automatique de la parole}\vspace{1.5cm}\\
     \large
-    \textbf{Farès \textsc{Belhadj}}\vspace{1.5cm}\\
-    Date de soutenance : le JJ/MM/AAAA\vspace{1.75cm}\\
-  \end{center}\vspace{1.5cm}~\\
+    Amar \textsc{Bessalah}\\
+    {\&}\\
+    Mohamed \textsc{Benomari}\vspace{1.5cm}\\
+    Date de rendu : le 03/07/2020\vspace{2cm}\\
+  \end{center}\vspace{2cm}~\\
   \begin{tabular}{ll}
-    \hspace{-0.45cm}Organisme d'accueil~:~&~XXXXXXX (si stage)\\
-    \hspace{-0.45cm}Tuteur -- Organisme d'accueil~:~&~Prénom \textsc{Nom} (si stage)\\
-    \hspace{-0.45cm}Tuteur -- Université~:~&~Prénom \textsc{Nom}\\
+    \hspace{-0.45cm}Tuteur -- Université~:~&~Sami \textsc{Boutamine}\\
   \end{tabular}
 \end{titlepage}
 \frontmatter
@@ -346,10 +348,138 @@ Ce modèle sera beaucoup plus facile à manipuler. Cependant, dans de nombreux s
 \section{Approche par Dynamic time wrapping approch}
 
 
+% chapitre 4 : Programme, outils, données
+\chapter{Mise en place du projet}
 
+Nous allons donc travailler sur un projet qui aura pour but de tirer parti des outils et méthodes de reconnaissance de la parole, afin de développer notre propre programme d'identification des personnes grâce à leur voix.
 
+\section{Fonctionnalités du programme}
 
-% chapitre 4 : ############################################
+Ce programme devra être capable d'effectuer multiples tâches afin de pouvoir identifier des locuteurs de manière correcte.
+
+\subsection{Outils utilisées}
+
+Pour nous aider dans certaines de ces tâches, nous pourrons nous appuyer sur des outils performants, développés spécialement dans le but de faciliter les traitements sur le son.
+
+Fait sur Ubuntu
+Utilisation de scripte réalisés avec bash afin d'automatiser les commandes...
+PARLER de SPRO
+
+PArler de ALIZE
+Parler de LIA_RAL
+
+Parler de Alize pour android embarqué
+
+\section{Traitement des données}
+
+Afin d'obtenir des modèles de locuteurs robustes et performants, il est nécessaire de disposer d'une grande quantité de données (fichiers audio). Plus nous aurons de données, plus les modèles entraînés seront précis.  
+
+\subsection{Données utilisées\label{data-split}}
+
+Il existe diverses bases de données, accessibles sur internet, contenant des échantillons de voix facilement récupérables et traitables. Ces dernières sont généralement réparties selon différents critères :
+\begin{itemize}
+  \item le langage parlé
+  \item la qualité de l'enregistrement
+  \item la taille de la base de données
+  \item etc
+\end{itemize}
+
+Pour ce projet, nous avons récupéré une base de données composée d'enregistrements vocaux en anglais, de 106 personnes différentes. Chacune de ces personnes effectue 10 enregistrements, avec 2 textes différents :
+\begin{itemize}
+  \item 5 enregistrements dans lesquels des chiffres sont répétés ("\textit{5 0 6 9 2 8 1 3 7 4}")
+  \item 5 enregistrements dans lesquels une phrases est dite ("\textit{Joe took father’s green shoe bench out}")
+\end{itemize}
+
+Pour chaque type de texte, le premier enregistrement est toujours réalisé dans un lieu sans bruit, puis les quatre autres sont fait dans des conditions réelles (bureau, lieu public, etc), ce qui permet d'avoir des qualités d'enregistrement variées.\\
+
+>>>>>>>>>>>>>>Mettre Image explicative des fichiers ici<<<<<<<<<<<<<<<<<\\
+
+Cela nous permet de disposer de 1060 fichiers audio au total, dont la moitié sera utilisée pour ce projet.
+
+Nous avons donc 530 échantillons de voix, que nous allons alors diviser en 2 :
+\begin{itemize}
+  \item les enregistrements où des chiffres sont répétés seront utilisés pour \textbf{entraîner} nos modèles
+  \item les enregistrements où une phrase est dites seront utilisés pour \textbf{tester} nos modèles
+\end{itemize}
+
+\subsection{Extraction des caractéristiques des données}
+
+\subsection{Normalisation des caractéristiques}
+
+\subsection{Entraînement des modèles}
+
+À l'aide des outils disponibles avec Alize, nous allons pouvoir créer des modèles correspondants à nos locuteurs. Ces modèles seront utilisés par la suite pour effectuer des comparaisons entre différentes voix et déterminer l'identité des personnes à qui elles appartiennent. Il est à noté qu'entraîner les modèles nécessaires pour ce genre de projet nécessite une certaines puissance de calcul, et que plus nous avons de données à traiter, plus ce calcul sera long.
+
+\subsubsection{Modèle du monde}
+
+Tout d'abord, nous allons créer un modèle de locuteur \textit{général}. Cette étape nous permettra de générer un modèle universel (\textit{Universal Background Model)}, qui nous permettra d'obtenir une représentation des caractéristiques qui forment la parole. Ce dernier est entraîné en utilisant l'ensemble des fichiers correspondants aux locuteurs dont nous disposons. 
+
+Nous utilisons le programme \guillemotleft{}~TrainWorld~\guillemotright{}, présent dans Alize / \texttt{LIA\_RAL}, afin de créer ce modèle.
+
+\subsubsection{Modèle pour chaque locuteur}
+
+Nous allons maintenant pouvoir entraîner les modèles correspondants à chaque locuteur dont nous voudrons vérifier l'identité par la suite.
+Chacun d'eux sera généré en utilisant le modèle du monde crée précédemment, ainsi que les fichiers correspondants au locuteur pour lequel le modèle sera produit.
+
+Comme dit dans la section~\ref{data-split}, page~\pageref{data-split} \guillemotleft{}~\textbf{Données utilisées}~\guillemotright{}, les fichiers utilisés pour entraîner le modèle d'une personne seront ceux dans lesquels elle dit des chiffres.
+
+Nous pouvons utiliser le programme \guillemotleft{}~TrainTarget~\guillemotright{}, qui va générer les modèles correspondants à chaque locuteur.\\
+Avant cela, nous devons lui fournir un fichier \guillemotleft{}~.ndx~\guillemotright{}, dans lequel chaque ligne contient le nom du modèle du locuteur qui sera généré, suivi des noms des fichiers vocaux à utiliser pour son entraînement. Pour créer et remplir ce fichier avec les informations qui nous intéressent, nous avons écrit un script (en bash) qui nous permet d'automatiser sa génération, et lui fournit toutes les données qui lui sont nécessaires.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\linewidth]{images/trainFile.png}
+  \caption{Fichier contenant les informations nécessaires à l'entraînement des modèles de locuteur. Le modèle \textbf{spk000} correspond au 1er locuteur, et se servira des fichiers lui correspondant (ceux commençant par \textbf{000})}
+\end{figure}
+
+Nous faisons en sorte que chaque modèle qui sera crée utilise les 5 enregistrements de voix 
+
+\subsection{Test des modèles}
+
+Une fois les modèles de chaque locuteur entraînés, il convient de les tester, afin de déterminer leur performance et la justesse des résultats produits. Ici encore, Alize nous donne accès à des outils permettant de réaliser ces tests. Il s'agit en l'occurrence du programme \guillemotleft{}~ComputTest~\guillemotright{}. Ce dernier va utiliser les modèles des locuteurs et les comparer avec des échantillons de voix de test, afin de générer des scores correspondant au taux de probabilité que les 2 appartiennent à la même personne.
+
+Ce programme nécessite lui aussi un fichier de configuration de type \guillemotleft{}~.ndx~\guillemotright{}. Nous allons, là aussi, automatiser sa création à l'aide d'un script.\\
+
+En pratique, ce fichier contient la liste des noms de fichiers de test (comme présenté dans la section~\ref{data-split}, page~\pageref{data-split}, il s'agira ici des enregistrements audio où les locuteurs disent des phrases complètes), suivis des noms des modèles de locuteurs précédemment entraînés, et que nous voulons tester.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\linewidth]{images/testFile.png}
+  \caption{Fichier contenant les informations nécessaires au test des modèles crées}
+\end{figure}
+
+Dans notre cas, nous souhaitons tester tous les fichiers de test dont nous disposons, avec tous les modèles de locuteurs qui ont été entraînés.
+
+\subsection{Interprétation des résultats obtenus}
+
+La phase de test nous permet donc d'obtenir des résultats qui nous permettrons de savoir si notre programme réussi à identifier des locuteurs, mais aussi de connaître son niveau de précision, le taux d'erreurs, etc.\\
+
+À l'issue de l'étape précédent, notre programme à généré un fichier contenant des résultats, qu'il nous reste à analyser. 
+
+Ces derniers sont représentés sous une forme de liste, où chaque ligne correspond à un test entre un modèle de locuteur et un échantillon audio. Ces ligne se décomposent comme suit :
+
+\begin{itemize}
+  \item la 1ère colonne correspond au sexe du locuteur (non utilisé dans ce projet) 
+  \item la 2ème nous informe sur le nom du modèle testé
+  \item la 3ème indique si le score est négatif (0) ou positif (1)
+  \item la 4ème correspond au nom du fichier de test
+  \item enfin, la dernière n'est autre que le score obtenu
+\end{itemize}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\linewidth]{images/goodResultExample.png}
+  \caption{Exemple de fichier contenant les résultats des tests}
+\end{figure}
+ 
+
+\subsection{Identification du locuteur}
+
+Afin de pouvoir dire avec fiabilité si un locuteur à bien été identifié, il est nécessaire d'analyser les résultats obtenus à l'issue des étapes précédentes. Nous nous intéressons au score affiché en fin de chaque ligne du fichier de résultat, et voulons notamment savoir à partir de quelle valeur nous pouvions considérer que ce dernier représentait une identification positive.
+
+Dans un premier temps, il est possible de filtrer ces résultats selon le signe du score (positif ou négatif), puisque les scores négatifs présents dans notre document signifient dans la majorité des cas traités que le locuteur et l'échantillon 
+
+% chapitre 5 : Conclusion et perspectives
 
 \chapter{Conclusion et Perspectives\label{chap-conclusion}}
 Vous arrivez à la presque-fin de votre périple (oui il restera le

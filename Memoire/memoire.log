@@ -1,159 +1,161 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.4.6)  1 JUL 2020 07:47
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.11.24)  3 JUL 2020 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **memoire.tex
 (./memoire.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-02-25>
-(c:/texlive/2019/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
-(c:/texlive/2019/texmf-dist/tex/latex/base/bk12.clo
-File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 9 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count167
-\c@chapter=\count168
-\c@section=\count169
-\c@subsection=\count170
-\c@subsubsection=\count171
-\c@paragraph=\count172
-\c@subparagraph=\count173
-\c@figure=\count174
-\c@table=\count175
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen134
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
 )
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks14
 )
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(c:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: xetex.def on input line 99.
 
-(c:/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen135
-\Gin@req@width=\dimen136
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 )
-(c:/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/02/28 3.41 The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
 
-(c:/texlive/2019/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2020/02/28 3.41 Babel switching mechanism
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
 )
-(c:/texlive/2019/texmf-dist/tex/generic/babel-french/french.ldf
-Language: french 2020/01/30 v3.5g French support from the babel system
 
-(c:/texlive/2019/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/02/28 3.41 Babel common definitions
-\babel@savecnt=\count176
-\U@D=\dimen137
+! Package babel Error: Unknown option `french'. Either you misspelled it
+(babel)                or the language definition file french.ldf was not found
+.
 
-(c:/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count177
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.445 \ProcessOptions*
+                      
+Valid options are: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+
+! Package babel Error: You haven't specified a language option.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.478 ...ry to proceed from here, type x to quit.}
+                                                  
+You need to specify a language, either as a global option
+or as an optional argument to the \usepackage command;
+You shouldn't try to proceed from here, type x to quit.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
-Package babel Info: \l@acadian = using hyphenrules for french
-(babel)             (\language28) on input line 91.
-Package babel Info: \l@canadien = using hyphenrules for french
-(babel)             (\language28) on input line 92.
-\FB@nonchar=\count178
-Package babel Info: Making : an active character on input line 419.
-Package babel Info: Making ; an active character on input line 420.
-Package babel Info: Making ! an active character on input line 421.
-Package babel Info: Making ? an active character on input line 422.
-\FBguill@level=\count179
-\FBold@everypar=\toks16
-\FB@Mht=\dimen138
-\mc@charclass=\count180
-\mc@charfam=\count181
-\mc@charslot=\count182
-\std@mcc=\count183
-\dec@mcc=\count184
-\c@FBcaption@count=\count185
-\listindentFB=\dimen139
-\descindentFB=\dimen140
-\labelindentFB=\dimen141
-\labelwidthFB=\dimen142
-\leftmarginFB=\dimen143
-\parindentFFN=\dimen144
-\FBfnindent=\dimen145
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-(c:/texlive/2019/texmf-dist/tex/latex/carlisle/scalefnt.sty)
-(c:/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip43
+\multirow@cntb=\count88
+\multirow@dima=\skip44
+\bigstrutjot=\dimen105
 )
-(c:/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-)
-(c:/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip49
-\multirow@cntb=\count186
-\multirow@dima=\skip50
-\bigstrutjot=\dimen146
-)
-(c:/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count187
-\lst@gtempboxa=\box45
-\lst@token=\toks19
-\lst@length=\count188
-\lst@currlwidth=\dimen147
-\lst@column=\count189
-\lst@pos=\count190
-\lst@lostspace=\dimen148
-\lst@width=\dimen149
-\lst@newlines=\count191
-\lst@lineno=\count192
-\lst@maxwidth=\dimen150
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count89
+\lst@gtempboxa=\box26
+\lst@token=\toks17
+\lst@length=\count90
+\lst@currlwidth=\dimen106
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen107
+\lst@width=\dimen108
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen109
 
-(c:/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count193
-\lst@skipnumbers=\count194
-\lst@framebox=\box46
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box27
 )
-(c:/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2019/09/10 1.8c listings configuration
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2019/09/10 1.8c (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(c:/texlive/2019/texmf-dist/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count195
-\float@exts=\toks20
-\float@box=\box47
-\@float@everytoks=\toks21
-\@floatcapt=\box48
+\c@float@type=\count97
+\float@exts=\toks18
+\float@box=\box28
+\@float@everytoks=\toks19
+\@floatcapt=\box29
 )
-(c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip16
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(c:/texlive/2019/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(c:/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks22
-\c@algorithm=\count196
+\@float@every@algorithm=\toks20
+\c@algorithm=\count98
 )
 (./style/myalgorithm.sty
 
@@ -166,198 +168,151 @@ LaTeX Warning: You have requested package `style/myalgorithm',
                but the package provides `myalgorithm'.
 
 Package: myalgorithm 
-(c:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count197
-\calc@Bcount=\count198
-\calc@Adimen=\dimen151
-\calc@Bdimen=\dimen152
-\calc@Askip=\skip51
-\calc@Bskip=\skip52
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count99
+\calc@Bcount=\count100
+\calc@Adimen=\dimen110
+\calc@Bdimen=\dimen111
+\calc@Askip=\skip45
+\calc@Bskip=\skip46
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count199
-\calc@Cskip=\skip53
+\calc@Ccount=\count101
+\calc@Cskip=\skip47
 )
-(c:/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box49
-\UL@hyphenbox=\box50
-\UL@skip=\skip54
-\UL@hook=\toks23
-\UL@height=\dimen153
-\UL@pe=\count266
-\UL@pixel=\dimen154
-\ULC@box=\box51
-Package: ulem 2019/11/18
-\ULdepth=\dimen155
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box30
+\UL@hyphenbox=\box31
+\UL@skip=\skip48
+\UL@hook=\toks21
+\UL@height=\dimen112
+\UL@pe=\count102
+\UL@pixel=\dimen113
+\ULC@box=\box32
+Package: ulem 2012/05/18
+\ULdepth=\dimen114
 )
-\c@ALC@line=\count267
-\c@ALC@rem=\count268
-\ALC@tlm=\skip55
-\ALC@sep=\skip56
+\c@ALC@line=\count103
+\c@ALC@rem=\count104
+\ALC@tlm=\skip49
+\ALC@sep=\skip50
 )
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip57
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
-\ex@=\dimen156
+\@emptytoks=\toks22
+\ex@=\dimen115
 ))
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen157
+\pmbraise@=\dimen116
 )
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count269
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count270
-\leftroot@=\count271
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count272
-\DOTSCASE@=\count273
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
-\big@size=\dimen158
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count274
-\c@MaxMatrixCols=\count275
-\dotsspace@=\muskip17
-\c@parentequation=\count276
-\dspbrk@lvl=\count277
-\tag@help=\toks25
-\row@=\count278
-\column@=\count279
-\maxfields@=\count280
-\andhelp@=\toks26
-\eqnshift@=\dimen159
-\alignsep@=\dimen160
-\tagshift@=\dimen161
-\tagwidth@=\dimen162
-\totwidth@=\dimen163
-\lineht@=\dimen164
-\@envbody=\toks27
-\multlinegap=\skip58
-\multlinetaggap=\skip59
-\mathdisplay@stack=\toks28
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+\inf@bad=\count105
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count106
+\leftroot@=\count107
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count108
+\DOTSCASE@=\count109
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box33
+\strutbox@=\box34
+\big@size=\dimen117
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
+\dotsspace@=\muskip11
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
+\tag@help=\toks23
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
+\andhelp@=\toks24
+\eqnshift@=\dimen118
+\alignsep@=\dimen119
+\tagshift@=\dimen120
+\tagwidth@=\dimen121
+\totwidth@=\dimen122
+\lineht@=\dimen123
+\@envbody=\toks25
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-\@float@every@programslist=\toks29
-\c@programslist=\count281
-\c@program=\count282
-
-(c:/texlive/2019/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count283
-\l__pdf_internal_box=\box54
-)
-(./memoire.aux)
+\@float@every@programslist=\toks27
+\c@programslist=\count117
+\c@program=\count118
+ (./memoire.aux)
 \openout1 = `memoire.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
- (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count284
-\scratchdimen=\dimen165
-\scratchbox=\box55
-\nofMPsegments=\count285
-\nofMParguments=\count286
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count287
-\MPscratchDim=\dimen166
-\MPnumerator=\count288
-\makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks31
-) (c:/texlive/2019/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+\c@lstlisting=\count119
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
 
-(c:/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-LaTeX Info: Redefining \degres on input line 42.
-LaTeX Info: Redefining \dots on input line 42.
-LaTeX Info: Redefining \up on input line 42.
-\c@lstlisting=\count290
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
-
-
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 
-
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images/m2ise.png, id=1, 621.32124pt x 300.12125pt>
-File: images/m2ise.png Graphic file (type png)
-<use images/m2ise.png>
-Package pdftex.def Info: images/m2ise.png  used on input line 46.
-(pdftex.def)             Requested size: 88.34958pt x 42.67912pt.
-<images/m1info.png, id=3, 621.32124pt x 300.12125pt>
-File: images/m1info.png Graphic file (type png)
-<use images/m1info.png>
-Package pdftex.def Info: images/m1info.png  used on input line 46.
-(pdftex.def)             Requested size: 88.34958pt x 42.67912pt.
-<images/oaccueil.png, id=4, 621.32124pt x 300.12125pt>
-File: images/oaccueil.png Graphic file (type png)
-<use images/oaccueil.png>
-Package pdftex.def Info: images/oaccueil.png  used on input line 47.
-(pdftex.def)             Requested size: 88.34958pt x 42.67912pt.
+File: images/m2ise.png Graphic file (type bmp)
+<images/m2ise.png>
+File: images/p8.png Graphic file (type bmp)
+<images/p8.png>
  [1
 
 
-{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/m2ise.
-png> <./images/m1info.png> <./images/oaccueil.png>] [2
+] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-8.
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
-(c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 71--79
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
@@ -367,11 +322,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
 
 ] [3] [4
 
-] (./memoire.toc [5])
+] (./memoire.toc
+Missing character: There is no – in font ec-lmr12!
+Missing character: There is no – in font ec-lmr12!
+ [5])
 \tf@toc=\write3
 \openout3 = `memoire.toc'.
 
- [6] (./memoire.lof)
+ [6] (./memoire.lof
+Missing character: There is no ’ in font ec-lmr12!
+)
 \tf@lof=\write4
 \openout4 = `memoire.lof'.
 
@@ -386,12 +346,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
 [9] [10
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
-LaTeX Warning: Reference `sec-ordre-redaction' on page 1 undefined on input lin
-e 121.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--126
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
@@ -400,100 +360,231 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--126
 ] [2
 
 ]
-Chapitre 1.
+Chapter 1.
+Missing character: There is no ’ in font ec-lmr12!
 [3]
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-<fig/etape-acquisition-son.png, id=79, 945.5325pt x 228.855pt>
-File: fig/etape-acquisition-son.png Graphic file (type png)
-<use fig/etape-acquisition-son.png>
-Package pdftex.def Info: fig/etape-acquisition-son.png  used on input line 185.
+File: fig/etape-acquisition-son.png Graphic file (type bmp)
+<fig/etape-acquisition-son.png>
 
-(pdftex.def)             Requested size: 467.99881pt x 113.27484pt.
-
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 185--186
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 142--143
  [][] 
  []
 
-[5 <./fig/etape-acquisition-son.png>] [6]
-Chapitre 2.
-[7
+[5]
+Overfull \hbox (12.92386pt too wide) in paragraph at lines 150--150
+[]\T1/lmr/bx/n/12 Cadence d'échantillonnage : ( théoreme de Shannon-Nyquist
+ []
+
+Missing character: There is no ’ in font ec-lmr12!
+
+Overfull \hbox (6.60771pt too wide) in paragraph at lines 154--154
+[]\T1/lmr/bx/n/14.4 Quantification (con-ver-sion analogique numérique) 
+ []
+
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no … in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+
+Overfull \hbox (20.88924pt too wide) in paragraph at lines 155--156
+\T1/lmr/m/n/12 En traite-ment des sig-naux, la quan-tifi-ca-tion est le procédé
+ qui per-met d'approcher
+ []
+
+[6]
+Chapter 2.
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no – in font ec-lmbx12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 171.
+
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 171
+.
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 171.
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no – in font ec-lmr12!
+Missing character: There is no – in font ec-lmr12!
+Missing character: There is no – in font ec-lmr12!
+Missing character: There is no – in font ec-lmr12!
+ [7
 
 ]
-<fig/fourier.png, id=90, 551.05875pt x 255.95625pt>
-File: fig/fourier.png Graphic file (type png)
-<use fig/fourier.png>
-Package pdftex.def Info: fig/fourier.png  used on input line 235.
-(pdftex.def)             Requested size: 390.0pt x 181.15608pt.
-
-Underfull \vbox (badness 2726) has occurred while \output is active []
-
- [8 <./fig/fourier.png>]
-<fig/mfcc.png, id=94, 719.68875pt x 436.63126pt>
-File: fig/mfcc.png Graphic file (type png)
-<use fig/mfcc.png>
-Package pdftex.def Info: fig/mfcc.png  used on input line 258.
-(pdftex.def)             Requested size: 390.0pt x 236.61684pt.
- [9] [10 <./fig/mfcc.png>]
-Chapitre 3.
-<fig/model.png, id=101, 894.34125pt x 382.42876pt>
-File: fig/model.png Graphic file (type png)
-<use fig/model.png>
-Package pdftex.def Info: fig/model.png  used on input line 297.
-(pdftex.def)             Requested size: 390.0pt x 166.76947pt.
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+File: fig/fourier.png Graphic file (type bmp)
+<fig/fourier.png>
+Missing character: There is no ’ in font ec-lmr12!
+ [8]
+Missing character: There is no – in font ec-lmbx12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+File: fig/mfcc.png Graphic file (type bmp)
+<fig/mfcc.png>
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+ [9] [10]
+Chapter 3.
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no … in font ec-lmr12!
+Missing character: There is no … in font ec-lmr12!
+File: fig/model.png Graphic file (type bmp)
+<fig/model.png>
 
 Underfull \vbox (badness 4366) has occurred while \output is active []
 
  [11
 
 ]
-[12 <./fig/model.png>] [13]
-<fig/markov.png, id=112, 606.76688pt x 371.88937pt>
-File: fig/markov.png Graphic file (type png)
-<use fig/markov.png>
-Package pdftex.def Info: fig/markov.png  used on input line 373.
-(pdftex.def)             Requested size: 272.99881pt x 167.32596pt.
- [14] [15 <./fig/markov.png>] [16
+Missing character: There is no … in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no … in font ec-lmr12!
+
+[12]
+Missing character: There is no … in font ec-lmr12!
+Missing character: There is no … in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
+ [13]
+File: fig/markov.png Graphic file (type bmp)
+<fig/markov.png>
+ [14]
+Overfull \hbox (5.68005pt too wide) in paragraph at lines 348--348
+[]\T1/lmr/bx/n/17.28 Approche par Dy-namic time wrap-ping ap-
+ []
+
+[15] [16
 
 ]
-Chapitre 4.
+Chapter 4.
+
+Overfull \hbox (0.69269pt too wide) in paragraph at lines 364--367
+[]\T1/lmr/m/n/12 Fait sur Ubuntu Util-i-sa-tion de scripte réal-isés avec bash 
+afin d'automatiser
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.369 Parler de LIA_
+                    RAL
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.370 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[17]
+Overfull \hbox (52.85669pt too wide) in paragraph at lines 387--388
+[]\T1/lmr/m/n/12 Pour ce pro-jet, nous avons récupéré une base de don-nées com-
+posée d'enregistrements
+ []
+
+Missing character: There is no ’ in font ec-lmri12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
+
+ []
+
+[18]
+Overfull \hbox (3.5739pt too wide) in paragraph at lines 415--416
+\T1/lmr/m/n/12 nous per-me-t-tra de générer un mod-èle uni-versel (\T1/lmr/m/it
+/12 Uni-ver-sal Back-ground Model)\T1/lmr/m/n/12 ,
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 417.
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (5.04324pt too wide) in paragraph at lines 417--418
+[]\T1/lmr/m/n/12 Nous util-isons le pro-gramme ^^S Train-World ^^T, présent dan
+s Al-ize / \T1/lmtt/m/n/12 LIA_RAL\T1/lmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (4.0128pt too wide) in paragraph at lines 421--423
+\T1/lmr/m/n/12 Nous al-lons main-tenant pou-voir en-traîner les mod-èles cor-re
+-spon-dants à chaque
+ []
+
+File: images/trainFile.png Graphic file (type bmp)
+<images/trainFile.png>
+[19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+File: images/testFile.png Graphic file (type bmp)
+<images/testFile.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+ []
+
+[21]
+File: images/goodResultExample.png Graphic file (type bmp)
+<images/goodResultExample.png>
+ [22]
+Chapter 5.
 No file memoire.bbl.
-[17] (./memoire.aux)
+[23
 
-LaTeX Warning: There were undefined references.
-
- ) 
+] (./memoire.aux) ) 
 Here is how much of TeX's memory you used:
- 5910 strings out of 480994
- 79267 string characters out of 5916033
- 331452 words of memory out of 5000000
- 21308 multiletter control sequences out of 15000+600000
- 554333 words of font info for 73 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 30i,10n,36p,2394b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texl
-ive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2019/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2019/texmf-dist/
-fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2019/texmf-dist/fonts/type
-1/public/cm-super/sfbx1728.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/c
-m-super/sfbx2488.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sf
-cc1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb
-><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb><c:/texli
-ve/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2019/te
-xmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2019/texmf-dist/f
-onts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1
-/public/cm-super/sfrm1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm
--super/sfrm1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfs
-l1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-<c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texliv
-e/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2019/tex
-mf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2019/texmf-dist/fo
-nts/type1/public/cm-super/sfxc1440.pfb>
-Output written on memoire.pdf (29 pages, 1234341 bytes).
-PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3769 strings out of 494915
+ 48483 string characters out of 6176197
+ 109920 words of memory out of 5000000
+ 7535 multiletter control sequences out of 15000+600000
+ 59585 words of font info for 60 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 27i,8n,32p,2291b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on memoire.pdf (35 pages).

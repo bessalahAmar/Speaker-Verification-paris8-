@@ -1,3 +1,9 @@
-/data/wav/
-/data/prm
-/data/lbl
+#/data/wav/
+#/data/prm
+#/data/lbl
+/data
+/gmm
+/log
+/ndx
+/res
+/tuto-data

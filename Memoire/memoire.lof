@@ -1,10 +1,13 @@
-\babel@toc {french}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces étape de traitement du son}}{5}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces étape de traitement du son}}{5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Transformation d’un signal}}{8}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Etape du calcul des coefficients MFCC}}{10}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Transformation d’un signal}}{8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Etape du calcul des coefficients MFCC}}{10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Etape modéle statistique}}{12}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Chaîne de Markov}}{15}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Etape modéle statistique}}{12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Chaîne de Markov}}{15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Fichier contenant les informations nécessaires à l'entraînement des modèles de locuteur. Le modèle \textbf {spk000} correspond au 1er locuteur, et se servira des fichiers lui correspondant (ceux commençant par \textbf {000})}}{20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Fichier contenant les informations nécessaires au test des modèles crées}}{21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Exemple de fichier contenant les résultats des tests}}{22}
 \addvspace {10\p@ }
