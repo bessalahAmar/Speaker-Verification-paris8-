@@ -63,7 +63,7 @@
     Date de rendu : le 03/07/2020\vspace{2cm}\\
   \end{center}\vspace{2cm}~\\
   \begin{tabular}{ll}
-    \hspace{-0.45cm}Tuteur -- Université~:~&~Sami \textsc{Boutamine}\\
+    \hspace{-0.45cm}Tuteur~:~&~Sami \textsc{Boutamine}\\
   \end{tabular}
 \end{titlepage}
 \frontmatter
@@ -262,7 +262,7 @@ Dans cette étape on réalise une association entre les segments élémentaires 
 
 \subsection{Approche statistique}
 
-L’RAS vise à convertir le signal vocal en texte et ce processus peut être formulé statistiquement comme suit. Soit un ensemble d'observations acoustiques O = (o1, o2, o3,…,on) (séquence de vecteurs de parole, où oi est le vecteur de parole observé à l'instant i), qui est la séquence de mots W = (w1, w2, …, Wn) qui a la probabilité maximale
+L’RAS vise à convertir le signal vocal en texte et ce processus peut être formulé statistiquement comme suit. Soit un ensemble d'observations acoustiques O = (o1, o2, o3, on) (séquence de vecteurs de parole, où oi est le vecteur de parole observé à l'instant i), qui est la séquence de mots W = (w1, w2, Wn) qui a la probabilité maximale
 
 
 \begin{figure}[htbp]
@@ -284,7 +284,7 @@ Dans ce modèle, la probabilité de chaque mot dépend uniquement de la probabil
 
 \textbf{n-gram}
 
-Dans un modèle à n-grammes on cherche la probabilité P (w1, w2,…, wm) d’observer la phrase w1, w2,…, wm
+Dans un modèle à n-grammes on cherche la probabilité P (w1, w2, wm) d’observer la phrase w1, w2, wm
 
 On suppose que la probabilité d'observer le i-ème mot wi dans l'historique de contexte des mots i-1 précédents peut être approximée par la probabilité de l'observer dans l'historique de contexte raccourci des n-1 mots précédents (propriété de Markov d'ordre n) .
 
@@ -347,7 +347,7 @@ La motivation de base est que nous voulons faire de la reconnaissance vocale de 
 DTW est une méthode pour mesurer la similitude d'un modèle avec différents amplitude. Plus la distance produite est petite, plus les deux motifs sonores sont similaires. Les deux modèles sonores sont similaires, donc les deux voix sont censées être les mêmes. Les données initiales sur le processus de reconnaissance vocale sont transformées en ondes de fréquence. Le volume de prononciation, le temps de prononciation et le bruit du son autour de l'enregistrement affectent la distance générée. Plus l'effet est petit, plus la distance qui sera générée sera petite.
 
 \subsection{Outils d'apprentissage de modéle}
-Plusieurs outil sont disponible pour la partie apprentissage et construction de modèle , on peut citer : speech-recognition , sci-py , alize , htk et autre.
+Plusieurs outil sont disponible pour la partie apprentissage et construction de modèle, nous pouvons citer : speech-recognition, sci-py, ALIZÉ, htk et autre.
 
 \subsubsection{ALIZE}
 
@@ -356,9 +356,9 @@ ALIZÉ est une plateforme open source pour la reconnaissance des locuteurs. Le b
 \begin{enumerate}
 
 \item LIA-SpkDet : un ensemble d'outils pour effectuer toutes les tâches requises par un système d'authentification de locuteur - formation de modèles, normalisation des fonctionnalités, normalisation des scores, etc.
-\item LIA-SpkSeg: Outils pour la diarisation des locuteurs.
-\item LIA-Utils: Utilitaires pour manipuler les différents formats de données utilisés dans ALIZÉ
-\item LIA-SpkTools: La bibliothèque sur laquelle les autres parties sont basées; il fournit des fonctions de haut niveau par-dessus ALIZE-core.
+\item LIA-SpkSeg : Outils pour la diarisation des locuteurs.
+\item LIA-Utils : utilitaires pour manipuler les différents formats de données utilisés dans ALIZÉ
+\item LIA-SpkTools : La bibliothèque sur laquelle les autres parties sont basées; il fournit des fonctions de haut niveau par-dessus ALIZE-core.
 
 \end{enumerate}
 
