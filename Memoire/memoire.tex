@@ -104,7 +104,7 @@ Nous allons nous appuyer sur les nombreux outils développés dans le but de fac
 
 % chapitre 1 section 1 : ############################################
 
-\chapter{Etat de l'art}
+\chapter{État de l'art}
 
 \section{Acquisition du son}
 
@@ -132,7 +132,7 @@ Cela nécessite que tous les microphones à condensateur soient alimentés: soit
 
 Les microphones à condensateur sont plus complexes que les dynamiques et ont tendance à être un peu plus coûteux. De plus, les condenseurs peuvent être affectés par des températures et des taux d'humidité extrêmes, ce qui peut les rendre bruyants ou en panne de façon temporaire. Cependant, les condenseurs peuvent facilement être fabriqués avec une sensibilité plus élevée et peuvent fournir un son plus doux et plus naturel, en particulier à des fréquences élevées. La réponse en fréquence plate et la plage de fréquence étendue sont beaucoup plus faciles à obtenir dans un condenseur. De plus, les microphones à condensateur peuvent être très petits sans perte significative de performances. Image Microphone à condensateur La décision d’utiliser un microphone à condensateur ou dynamique dépend non seulement de la source sonore et du système de renforcement acoustique, mais également du réglage physique. D'un point de vue pratique, si le microphone doit être utilisé dans un environnement sévère tel qu'un club de rock'n'roll ou pour le son en extérieur, des types dynamiques constitueront un bon choix. Dans un environnement plus contrôlé, tel qu'une salle de concert ou une configuration théâtrale, un microphone à condensateur peut être préféré pour de nombreuses sources sonores, en particulier lorsque la qualité sonore optimale est désirée (https://www.shure.com/en-US/support/find-an-answer/difference-between-a-dynamic-andcondenser-microphone)
 
-\subsection{Etape de traitement du son}
+\subsection{Étapes de traitement du son}
 
 Le traitement numérique du signal par ordinateur exige que le signal soit converti en une suite de nombres (numérisation). Cette conversion se décompose, sur le plan théorique, en trois opérations
 
@@ -161,9 +161,9 @@ La compression audio est une forme de compression de données qui a pour but de 
 
 \section{Extraction de paramètres}
 
-Une fois l’enregistrement audio effectué, il sera traité afin d’obtenir des données utilisables par un programme informatique (conversion d’un signal analogique vers un signal numérique/digital).
+Une fois l’enregistrement audio effectué, il sera traité afin d'obtenir des données utilisables par un programme informatique (conversion d’un signal analogique vers un signal numérique/digital).
 
-\subsection{Reconnaissance vocale – Paramétrisation / traitement}
+\subsection{Reconnaissance vocale : paramétrisation / traitement}
 
 Le traitement de l’enregistrement obtenu passe par l’analyse de plusieurs paramètres qui le composent (volume sonore, bruits de fond, intonation, etc), appelés traits prosodiques. Les différents traits prosodiques (paramètres prosodiques) :
 
@@ -428,11 +428,6 @@ L’extraction des paramètres spectraux des signaux sonores consiste à obtenir
 La normalisation est une technique souvent appliquée dans le cadre de la préparation des données pour l'apprentissage automatique. Le but de la normalisation est de changer les valeurs des colonnes numériques de l'ensemble de données à une échelle commune, sans fausser les différences dans les plages de valeurs. Dans notre cas le volume (  amplitude ) des enregistrements peut varier , on peut avoir un enregistrement avec une voix haute ou à voix faible ainsi il est nécessaire de faire une normalisation.
 
 Le résultat de cette étape nous permet d'avoir des nouveaux fichiers .norm.prm qu’on va stocker dans les mêmes répertoires prm ainsi que des fichiers d'étiquettes indiquant l'étiquette temporelle des trames vocales dans ./data/lbl/
-
-\subsection{Entraînement des modèles}
-
-À l'aide des outils disponibles avec Alize, nous allons pouvoir créer des modèles correspondants à nos locuteurs. Ces modèles seront utilisés par la suite pour effectuer des comparaisons entre différentes voix et déterminer l'identité des personnes à qui elles appartiennent. Il est à noté qu'entraîner les modèles nécessaires pour ce genre de projet nécessite une certaines puissance de calcul, et que plus nous avons de données à traiter, plus ce calcul sera long.
-
 
 \subsection{Entraînement des modèles}
 
