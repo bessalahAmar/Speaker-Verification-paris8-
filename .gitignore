@@ -1,7 +1,8 @@
 /data
+/gmm
 /log
 /ndx
-/tuto-data
-/gmm
 /res
+/tuto-data
 /Presentation
+*.log
