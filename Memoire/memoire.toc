@@ -1,17 +1,17 @@
 \contentsline {chapter}{Résumé}{i}
 \contentsline {chapter}{Introduction}{1}
-\contentsline {chapter}{\numberline {1}Etat de l'art}{3}
+\contentsline {chapter}{\numberline {1}État de l'art}{3}
 \contentsline {section}{\numberline {1.1}Acquisition du son}{3}
 \contentsline {subsection}{\numberline {1.1.1}Type de microphone}{3}
 \contentsline {subsubsection}{\numberline {1.1.1.1}Microphones dynamiques}{3}
 \contentsline {subsubsection}{\numberline {1.1.1.2}Microphones à condensateur}{4}
 \contentsline {subsubsection}{\numberline {1.1.1.3}Différence entre microphones à condensateur et microphone dynamique}{5}
-\contentsline {subsection}{\numberline {1.1.2}Etape de traitement du son}{5}
+\contentsline {subsection}{\numberline {1.1.2}Étapes de traitement du son}{5}
 \contentsline {subsubsection}{\numberline {1.1.2.1}Échantillonnage}{6}
 \contentsline {subsubsection}{\numberline {1.1.2.2}Quantification (conversion analogique numérique)}{6}
 \contentsline {subsubsection}{\numberline {1.1.2.3}Compression}{6}
 \contentsline {section}{\numberline {1.2}Extraction de paramètres}{6}
-\contentsline {subsection}{\numberline {1.2.1}Reconnaissance vocale – Paramétrisation / traitement}{6}
+\contentsline {subsection}{\numberline {1.2.1}Reconnaissance vocale : paramétrisation / traitement}{6}
 \contentsline {subsection}{\numberline {1.2.2}Algorithmes de traitement du signal audio}{7}
 \contentsline {subsubsection}{\numberline {1.2.2.1}Transformation de Fourier}{7}
 \contentsline {subsubsection}{\numberline {1.2.2.2}Transformation de Fourier discrète}{7}
@@ -37,10 +37,9 @@
 \contentsline {subsection}{\numberline {2.2.2}Extraction des caractéristiques des données}{17}
 \contentsline {subsection}{\numberline {2.2.3}Normalisation des caractéristiques}{17}
 \contentsline {subsection}{\numberline {2.2.4}Entraînement des modèles}{17}
-\contentsline {subsection}{\numberline {2.2.5}Entraînement des modèles}{18}
-\contentsline {subsubsection}{\numberline {2.2.5.1}Modèle du monde}{18}
-\contentsline {subsubsection}{\numberline {2.2.5.2}Modèle pour chaque locuteur}{18}
-\contentsline {subsection}{\numberline {2.2.6}Test des modèles}{20}
-\contentsline {subsection}{\numberline {2.2.7}Interprétation des résultats obtenus}{20}
-\contentsline {subsection}{\numberline {2.2.8}Identification du locuteur}{21}
+\contentsline {subsubsection}{\numberline {2.2.4.1}Modèle du monde}{18}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Modèle pour chaque locuteur}{18}
+\contentsline {subsection}{\numberline {2.2.5}Test des modèles}{18}
+\contentsline {subsection}{\numberline {2.2.6}Interprétation des résultats obtenus}{20}
+\contentsline {subsection}{\numberline {2.2.7}Identification du locuteur}{21}
 \contentsline {chapter}{\numberline {3}Conclusion et Perspectives}{23}

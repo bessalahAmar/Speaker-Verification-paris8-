@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.11.24)  4 JUL 2020 00:57
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.11.24)  10 JUL 2020 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -326,7 +326,6 @@ Overfull \hbox (10.34785pt too wide) in paragraph at lines 11--11
  []
 
 Missing character: There is no – in font ec-lmr12!
-Missing character: There is no – in font ec-lmr12!
 [3])
 \tf@toc=\write3
 \openout3 = `memoire.toc'.
@@ -364,11 +363,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
 ]
 Chapter 1.
 [3]
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-
 Overfull \hbox (49.51169pt too wide) in paragraph at lines 133--134
 \T1/lmr/m/n/12 US/support/find-an-answer/difference-between-a-dynamic-andconden
 ser-microphone) 
@@ -398,29 +392,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
  []
 
 [5]
-Missing character: There is no ’ in font ec-lmr12!
-
 Overfull \hbox (1.77934pt too wide) in paragraph at lines 151--152
 []\T1/lmr/m/n/12 Si toutes les fréquences du sig-nal sont in-férieures à la moi
 tié de la fréquence
  []
 
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
+
+Overfull \hbox (32.99919pt too wide) in paragraph at lines 151--152
+\T1/lmr/m/n/12 d'échantillonnage, il peut être par-faite-ment re-con-sti-tué (f
+réquence d'échantillonnage
+ []
+
 
 Overfull \hbox (20.88924pt too wide) in paragraph at lines 154--155
 \T1/lmr/m/n/12 En traite-ment des sig-naux, la quan-tifi-ca-tion est le procédé
  qui per-met d'approcher
  []
 
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no – in font ec-lmbx12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
+
+Overfull \hbox (2.03876pt too wide) in paragraph at lines 166--166
+[]\T1/lmr/bx/n/14.4 Reconnaissance vo-cale : paramétri-sa-tion / traite-
+ []
+
 [6]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 171.
 
@@ -435,50 +428,20 @@ File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 171.
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
 Missing character: There is no – in font ec-lmr12!
 Missing character: There is no – in font ec-lmr12!
 Missing character: There is no – in font ec-lmr12!
 Missing character: There is no – in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
 File: fig/fourier.png Graphic file (type bmp)
 <fig/fourier.png>
-Missing character: There is no ’ in font ec-lmr12!
 Missing character: There is no – in font ec-lmbx12!
-Missing character: There is no ’ in font ec-lmr12!
  [7]
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
 File: fig/mfcc.png Graphic file (type bmp)
 <fig/mfcc.png>
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
- [8]
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
- [9]
-Missing character: There is no ’ in font ec-lmr12!
+ [8] [9]
 File: fig/model.png Graphic file (type bmp)
 <fig/model.png>
- [10]
-Missing character: There is no ’ in font ec-lmr12!
- [11]
+ [10] [11]
 File: fig/markov.png Graphic file (type bmp)
 <fig/markov.png>
  [12]
@@ -496,7 +459,6 @@ Overfull \hbox (52.85669pt too wide) in paragraph at lines 394--395
 posée d'enregistrements
  []
 
-Missing character: There is no ’ in font ec-lmr12!
 
 Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
@@ -513,49 +475,46 @@ sateur avec
  []
 
 [16]
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
- [17]
-Overfull \hbox (3.5739pt too wide) in paragraph at lines 443--444
+Overfull \hbox (3.5739pt too wide) in paragraph at lines 438--439
 \T1/lmr/m/n/12 nous per-me-t-tra de générer un mod-èle uni-versel (\T1/lmr/m/it
 /12 Uni-ver-sal Back-ground Model)\T1/lmr/m/n/12 ,
  []
 
-
-Overfull \hbox (4.0128pt too wide) in paragraph at lines 449--451
+[17]
+Overfull \hbox (4.0128pt too wide) in paragraph at lines 444--446
 \T1/lmr/m/n/12 Nous al-lons main-tenant pou-voir en-traîner les mod-èles cor-re
 -spon-dants à chaque
  []
 
 File: images/trainFile.png Graphic file (type bmp)
 <images/trainFile.png>
-[18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 469--470
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
+[18] [19]
 File: images/testFile.png Graphic file (type bmp)
 <images/testFile.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
 [20]
 File: images/goodResultExample.png Graphic file (type bmp)
 <images/goodResultExample.png>
- [21]
 File: images/badResultExample.png Graphic file (type bmp)
 <images/badResultExample.png>
- [22]
+ [21] [22]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--527
+Underfull \hbox (badness 10000) in paragraph at lines 519--522
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
 
  []
 
@@ -564,30 +523,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 528--529
 ] [24
 
 ]
-Missing character: There is no — in font ec-lmri12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 544--548
-[]\T1/lmr/m/n/12 Jonathan Hui. \T1/lmr/m/it/12 Speech Recog-ni-tion  GMM, HMM\T
-1/lmr/m/n/12 .
+Underfull \hbox (badness 10000) in paragraph at lines 539--543
+[]\T1/lmr/m/n/12 Jonathan Hui. \T1/lmr/m/it/12 Speech Recog-ni-tion - GMM, HMM\
+T1/lmr/m/n/12 .
  []
 
 
-Overfull \hbox (93.2774pt too wide) in paragraph at lines 544--548
+Overfull \hbox (93.2774pt too wide) in paragraph at lines 539--543
 \T1/lmr/m/n/12 [\T1/lmtt/m/it/12 https://medium.com/@jonathan_hui/speech-recogn
 ition-gmm-hmm-8bb5eff8b196\T1/lmr/m/n/12 ].
  []
 
 
-Overfull \hbox (33.7842pt too wide) in paragraph at lines 554--556
-[]\T1/lmr/m/n/12 Documentation en ligne pour \T1/lmr/m/it/12 SPro\T1/lmr/m/n/12
- . \T1/lmr/m/it/12 https://www.irisa.fr/metiss/guig/spro/spro-
+Overfull \hbox (33.84004pt too wide) in paragraph at lines 549--551
+[]\T1/lmr/m/n/12 Documentation en ligne pour SPro. \T1/lmr/m/it/12 https://www.
+irisa.fr/metiss/guig/spro/spro-
  []
 
 [25] (./memoire.aux) ) 
 Here is how much of TeX's memory you used:
  3770 strings out of 494915
  48633 string characters out of 6176197
- 109947 words of memory out of 5000000
+ 108947 words of memory out of 5000000
  7540 multiletter control sequences out of 15000+600000
  49549 words of font info for 51 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
