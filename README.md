@@ -19,8 +19,9 @@ Their content looks like this:
 
 - abcd f1 f2 f3
 - abcd: name of the speaker model to create
-- f1, f2, etc: name of the feature files used to create it
+- f1, f2, etc: name of the feature files you want to use to create the model
 
-# Crédit 
+# Credits
+
 https://alize.univ-avignon.fr<br/>
 https://www.irisa.fr/metiss/guig/spro/spro-4.0.1/spro_3.html
